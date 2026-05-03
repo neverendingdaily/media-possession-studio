@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>メディア憑依スタジオ — Ultimate Edition</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🎭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
@@ -74,6 +74,8 @@ h1 em{font-style:italic;color:var(--accent);}
 .btn-data.ex:hover{border-color:var(--accent);color:var(--accent);background:var(--acc-lt);}
 .btn-data.im{border-color:var(--accent);background:var(--acc-lt);color:var(--accent);}
 .btn-data.im:hover{background:var(--accent);color:#fff;}
+.btn-data.html{border-color:var(--acc-mid);background:var(--acc-lt);color:var(--acc-mid);}
+.btn-data.html:hover{background:var(--acc-mid);color:#fff;}
 .tabs-nav{display:flex;border-bottom:1.5px solid var(--border);margin-top:30px;animation:fadeUp .5s .2s ease-out both;gap:0;overflow-x:auto;}
 .tab-btn{display:flex;align-items:center;gap:7px;padding:12px 20px;font-family:var(--mf);font-size:11px;font-weight:700;background:none;border:none;cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1.5px;color:var(--muted);transition:color .2s,border-color .2s,background .2s;border-radius:4px 4px 0 0;letter-spacing:.04em;white-space:nowrap;flex-shrink:0;}
 .tab-btn:hover{color:var(--text);background:var(--surface2);}
@@ -97,15 +99,15 @@ h1 em{font-style:italic;color:var(--accent);}
 .req{color:var(--red);}
 .lbl-row{display:flex;justify-content:space-between;align-items:center;}
 .sub-lbl{font-size:11.5px;color:var(--muted);font-family:var(--sf);font-style:italic;}
-.mag-sel-btn{width:100%;display:flex;align-items:center;gap:12px;background:var(--surface2);border:1.5px solid var(--border);color:var(--text);border-radius:6px;padding:12px 14px;cursor:pointer;text-align:left;transition:border-color .2s,background .2s,box-shadow .2s;font-family:var(--bf);font-size:13px;}
+.mag-sel-btn{width:100%;display:flex;align-items:center;gap:12px;background:var(--surface2);border:1.5px solid var(--border);color:var(--text);border-radius:6px;padding:13px 16px;cursor:pointer;text-align:left;transition:border-color .2s,background .2s,box-shadow .2s;font-family:var(--bf);font-size:13px;}
 .mag-sel-btn:hover{border-color:var(--border2);background:var(--surface3);}
 .mag-sel-btn.active{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,58,92,.08);}
-.msb-icon{font-size:20px;flex-shrink:0;}
-.msb-text{flex:1;display:flex;flex-direction:column;gap:2px;overflow:hidden;}
-.msb-name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.msb-icon{font-size:22px;flex-shrink:0;}
+.msb-text{flex:1;display:flex;flex-direction:column;gap:3px;overflow:hidden;}
+.msb-name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .msb-desc{font-size:11px;color:var(--muted);font-family:var(--mf);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.msb-arrow{flex-shrink:0;color:var(--dim);transition:transform .2s;}
-.mag-sel-btn.active .msb-arrow{transform:rotate(180deg);}
+.msb-badge{flex-shrink:0;font-family:var(--mf);font-size:10px;font-weight:700;letter-spacing:.06em;color:var(--accent);background:var(--acc-lt);border:1px solid rgba(26,58,92,.2);border-radius:4px;padding:3px 9px;}
+.mag-sel-btn.active .msb-badge{background:var(--accent);color:#fff;border-color:var(--accent);}
 .corner-grid{display:flex;flex-direction:column;gap:6px;max-height:260px;overflow-y:auto;padding-right:2px;}
 .corner-btn{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:6px;border:1.5px solid var(--border);background:var(--surface2);cursor:pointer;text-align:left;width:100%;transition:all .2s;}
 .corner-btn:hover{border-color:var(--border2);background:var(--surface3);}
@@ -383,6 +385,9 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
     <button class="btn-data ex" onclick="exportMags()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>エクスポート（JSON）
     </button>
+    <button class="btn-data html" onclick="exportHtml()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>エクスポート（HTML・データ込み）
+    </button>
     <button class="btn-data im" onclick="document.getElementById('importFile').click()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>インポート（JSON）
     </button>
@@ -415,7 +420,7 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
         <button class="mag-sel-btn" id="magSelBtn" onclick="openMagModal()">
           <span class="msb-icon" id="selMagIcon">📰</span>
           <span class="msb-text"><span class="msb-name" id="selMagName">媒体を選択してください</span><span class="msb-desc" id="selMagDesc">—</span></span>
-          <svg class="msb-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="msb-badge">選択</span>
         </button>
       </div>
       <div class="field">
@@ -1178,6 +1183,38 @@ function extractText(res){return(res?.candidates?.[0]?.content?.parts||[]).map(p
 
 /* ── EXPORT/IMPORT ── */
 function exportMags(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(MAGS,null,2)],{type:'application/json'}));a.download='mps-ultimate-'+Date.now()+'.json';a.click();toast('📦 エクスポートしました');}
+
+async function exportHtml(){
+  try{
+    let src = document.documentElement.outerHTML;
+    // Find the MAGS marker and replace with current data
+    const MS='/*__MPS_MAGS_S__*/';const ME='/*__MPS_MAGS_E__*/';
+    const si=src.indexOf(MS);const ei=src.indexOf(ME);
+    if(si===-1||ei===-1){
+      // No marker yet — inject at DEFAULTS definition
+      const defMarker='const DEFAULTS=';
+      const di=src.indexOf(defMarker);
+      if(di===-1){toast('⚠ エクスポートに失敗しました');return;}
+      // Find end of DEFAULTS array
+      let depth=0,pos=di+defMarker.length;
+      while(pos<src.length){
+        if(src[pos]==='[')depth++;
+        else if(src[pos]===']'){depth--;if(depth===0){pos++;break;}}
+        pos++;
+      }
+      // Replace DEFAULTS value with current MAGS
+      src=src.slice(0,di)+'const DEFAULTS='+JSON.stringify(MAGS)+src.slice(pos);
+    } else {
+      src=src.slice(0,si)+MS+'const DEFAULTS='+JSON.stringify(MAGS)+';'+ME+src.slice(ei+ME.length);
+    }
+    const blob=new Blob(['<!DOCTYPE html>\n'+src],{type:'text/html'});
+    const a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);
+    a.download='media-possession-studio-'+Date.now()+'.html';
+    a.click();URL.revokeObjectURL(a.href);
+    toast('✦ HTML（媒体データ込み）をエクスポートしました');
+  }catch(e){toast('⚠ エクスポート失敗: '+e.message);console.error(e);}
+}
 function importMags(e){
   const f=e.target.files[0];if(!f)return;
   const r=new FileReader();r.onload=ev=>{
