@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
+<html lang="ja" class="no-touch"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>メディア憑依スタジオ — Ultimate Edition</title>
 <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🍻&lt;/text&gt;&lt;/svg&gt;">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&amp;family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=DM+Sans:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 
 :root{
@@ -336,7 +335,920 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
 
 </style>
-</head>
+<style type="text/css"></style><style type="text/css">/*
+ * contextMenu.js v 1.4.0
+ * Author: Sudhanshu Yadav
+ * s-yadav.github.com
+ * Copyright (c) 2013 Sudhanshu Yadav.
+ * Dual licensed under the MIT and GPL licenses
+**/
+
+.iw-contextMenu {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10) !important;
+    border: 1px solid #c8c7cc !important;
+    border-radius: 11px !important;
+    display: none;
+    z-index: 1000000132;
+    max-width: 300px !important;
+    width: auto !important;
+}
+
+.dark-mode .iw-contextMenu,
+.TnITTtw-dark-mode.iw-contextMenu,
+.TnITTtw-dark-mode .iw-contextMenu {
+    border-color: #747473 !important;
+}
+
+.iw-cm-menu {
+    background: #fff !important;
+    color: #000 !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    overflow: visible !important;
+}
+
+.dark-mode .iw-cm-menu,
+.TnITTtw-dark-mode.iw-cm-menu,
+.TnITTtw-dark-mode .iw-cm-menu {
+    background: #525251 !important;
+    color: #FFF !important;
+}
+
+.iw-curMenu {
+}
+
+.iw-cm-menu li {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+    list-style: none !important;
+    padding: 10px !important;
+    padding-right: 20px !important;
+    border-bottom: 1px solid #c8c7cc !important;
+    font-weight: 400 !important;
+    cursor: pointer !important;
+    position: relative !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    line-height: inherit !important;
+    border-radius: 0 !important;
+    display: block !important;
+}
+
+.dark-mode .iw-cm-menu li, .TnITTtw-dark-mode .iw-cm-menu li {
+    border-bottom-color: #747473 !important;
+}
+
+.iw-cm-menu li:first-child {
+    border-top-left-radius: 11px !important;
+    border-top-right-radius: 11px !important;
+}
+
+.iw-cm-menu li:last-child {
+    border-bottom-left-radius: 11px !important;
+    border-bottom-right-radius: 11px !important;
+    border-bottom: none !important;
+}
+
+.iw-mOverlay {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0px !important;
+    left: 0px !important;
+    background: #FFF !important;
+    opacity: .5 !important;
+}
+
+.iw-contextMenu li.iw-mDisable {
+    opacity: 0.3 !important;
+    cursor: default !important;
+}
+
+.iw-mSelected {
+    background-color: #F6F6F6 !important;
+}
+
+.dark-mode .iw-mSelected, .TnITTtw-dark-mode .iw-mSelected {
+    background-color: #676766 !important;
+}
+
+.iw-cm-arrow-right {
+    width: 0 !important;
+    height: 0 !important;
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+    border-left: 5px solid #000 !important;
+    position: absolute !important;
+    right: 5px !important;
+    top: 50% !important;
+    margin-top: -5px !important;
+}
+
+.dark-mode .iw-cm-arrow-right, .TnITTtw-dark-mode .iw-cm-arrow-right {
+    border-left-color: #FFF !important;
+}
+
+.iw-mSelected > .iw-cm-arrow-right {
+}
+
+/*context menu css end */</style><style type="text/css">.TnITTtw-fp-collapsed-button {
+    display: none;
+    position: fixed !important;
+    top: 16px !important;
+    right: 16px !important;
+}
+
+.TnITTtw-fp-collapsed-button:hover {
+    opacity: 1.0 !important;
+}
+
+.TnITTtw-mate-fp-bar {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+    color: #000;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+    background: rgb(255 255 255 / 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 16px;
+    border-radius: 11px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+    width: 320px;
+    line-height: initial;
+}
+
+@-moz-document url-prefix() {
+    .TnITTtw-mate-fp-bar {
+        background: rgb(255 255 255 / 1.0);
+    }
+}
+
+.TnITTtw-mate-fp-bar.TnITTtw-dark-mode {
+    background: rgb(44, 44, 43);
+}
+
+.TnITTtw-hide-fp-bar {
+    width: 12px;
+    height: 12px;
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/regular-close-tt.png) !important;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.TnITTtw-hide-fp-bar:hover {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/hover-close-tt.png) !important;
+}
+
+.TnITTtw-current-page-lang {
+    color: #6d6d72;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.TnITTtw-dark-mode .TnITTtw-current-page-lang {
+    color: #98989D;
+}
+
+.TnITTtw-fp-translate {
+    width: calc(100% - 73px) !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+}
+
+.TnITTtw-fp-translate.TnITTtw-in-progress {
+    animation-name: funky-bg;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+}
+
+.TnITTtw-fp-translate.TnITTtw-show-original {
+    width: calc(100% - 20px) !important;
+}
+
+@keyframes funky-bg {
+    from {
+        background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+        linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+    }
+
+    to {
+        background-image: linear-gradient(90deg, #01EF92, #00D8FB),
+        linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+    }
+}
+
+.TnITTtw-change-language, .TnITTtw-stop-fp {
+    width: 38px;
+    height: 38px;
+    background-color: #EFEFF4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    border-radius: 11px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.TnITTtw-change-language {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/globe-earth.png) !important;
+}
+
+.TnITTtw-dark-mode .TnITTtw-change-language {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/globe-earth-dark.png) !important;
+}
+
+.TnITTtw-stop-fp {
+    display: none;
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/regular-stt-stop.png) !important;
+    background-size: 12px 12px;
+}
+
+.TnITTtw-dark-mode .TnITTtw-change-language, .TnITTtw-dark-mode .TnITTtw-stop-fp {
+    background-color: #525251 !important;
+}
+
+.TnITTtw-change-language:hover, .TnITTtw-stop-fp:hover {
+    background-color: #F6F6F6;
+}
+
+.TnITTtw-change-language:active, .TnITTtw-stop-fp:active {
+    background-color: #E9E9E9;
+}
+
+.TnITTtw-dark-mode .TnITTtw-change-language:hover,
+.TnITTtw-dark-mode .TnITTtw-stop-fp:hover,
+.TnITTtw-dark-mode .TnITTtw-change-language:active,
+.TnITTtw-dark-mode .TnITTtw-stop-fp:active {
+    background-color: #767675;
+}
+
+#TnITTtw-always-translate {
+}
+
+.TnITTtw-fp-options input {
+    padding: initial;
+    width: auto;
+    border: initial;
+    box-shadow: initial;
+    line-height: initial;
+    height: auto;
+    display: initial;
+    position: initial;
+    appearance: auto;
+    top: initial;
+    cursor: pointer;
+    margin: 0;
+}
+
+.TnITTtw-fp-options input[readonly="readonly"] {
+    opacity: 0.5;
+}
+
+#TnITTtw-always-translate + label,
+#TnITTtw-never-translate-lang + label,
+#TnITTtw-never-translate-site + label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif !important;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 4px;
+    color: #000;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 296px;
+    vertical-align: top;
+    line-height: initial;
+    letter-spacing: initial;
+    text-transform: initial;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#TnITTtw-always-translate + label::before,
+#TnITTtw-never-translate-lang + label::before,
+#TnITTtw-never-translate-site + label::before,
+#TnITTtw-always-translate + label::after,
+#TnITTtw-never-translate-lang + label::after,
+#TnITTtw-never-translate-site + label::after  {
+    content: initial;
+} 
+
+.TnITTtw-always-translate-inner-label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 252px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.TnITTtw-dark-mode #TnITTtw-always-translate + label,
+.TnITTtw-dark-mode #TnITTtw-never-translate-lang + label,
+.TnITTtw-dark-mode #TnITTtw-never-translate-site + label {
+    color: #FFF;
+}
+
+#TnITTtw-always-translate + label.TnITTtw-not-pro {
+    opacity: 0.5;
+}
+
+#TnITTtw-always-translate + label .TnITTtw-pro-label {
+    position: relative;
+    background: #000;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-left: 10px;
+    top: -1px;
+    user-select: none;
+    -webkit-user-select: none;
+    display: inline;
+    font-weight: 500;
+}
+
+.TnITTtw-dark-mode #TnITTtw-always-translate + label .TnITTtw-pro-label {
+    background: #FFF;
+    color: #000;
+}
+
+.TnITTtw-inline-original-tooltip {
+    display: none;
+    position: absolute;
+    margin: 0px;
+    border: none;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255 255 255 / 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 11px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: normal;
+}
+
+.TnITTtw-dark-mode.TnITTtw-inline-original-tooltip {
+    background-color: rgb(0 0 0 / 0.915);
+    color: #FFF;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-close-original-tooltip {
+    width: 12px;
+    height: 12px;
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/regular-close-tt.png) !important;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-close-original-tooltip:hover {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/hover-close-tt.png) !important;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-original-label {
+    margin: 0;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #6d6d72;
+    margin-bottom: 10px;
+}
+
+.TnITTtw-inline-original-tooltip.TnITTtw-dark-mode .TnITTtw-original-label {
+    color: #98989D;
+}
+
+.TnITTtw-inline-original-tooltip .TnITTtw-text-layout {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.TnITTtw-inline-original-tooltip.TnITTtw-dark-mode .TnITTtw-text-layout {
+    color: #FFF;
+}
+
+.TnITTtw-highlighted-for-original {
+    color: #0F0F5F;
+    background-color: #F0F0A0;
+}
+
+/* Dropdown scrollbars */
+
+#selVisibleScroll-1, #selVisibleScroll-2, #selVisibleScroll-3 {
+    overflow: hidden;
+    height: 259px;
+    width: 100%;
+    position: relative;
+}
+
+#sel-scrollbar-1, #sel-scrollbar-2, #sel-scrollbar-3 {
+    position: absolute;
+    width: 4px;
+    height: 259px;
+    left: 225px;
+}
+
+#sel-track-1, #sel-track-2, #sel-track-3 {
+    position: absolute;
+    top: 1px;
+    width: 4px;
+    height: calc(100% - 6px);
+}
+
+#sel-dragBar-1, #sel-dragBar-2, #sel-dragBar-3 {
+    position: absolute;
+    top: 1px;
+    width: 4px;
+    background: rgba(43, 43, 43, 0.5);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dark-mode #sel-dragBar-1, .dark-mode #sel-dragBar-2, .dark-mode #sel-dragBar-3 {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#sel-dragBar-1:hover, #sel-dragBar-2:hover, #sel-dragBar-3:hover, 
+#sel-dragBar-1:active, #sel-dragBar-2:active, #sel-dragBar-3:active {
+    background: rgba(43, 43, 43, 0.675);
+}
+
+.dark-mode #sel-dragBar-1:hover,
+.dark-mode #sel-dragBar-2:hover,
+.dark-mode #sel-dragBar-3:hover,
+.dark-mode #sel-dragBar-1:active,
+.dark-mode #sel-dragBar-2:active,
+.dark-mode #sel-dragBar-3:active {
+    background: rgba(255, 255, 255, 0.675);
+}
+
+#sel-scrollbar-1, #sel-track-1, #sel-dragBar-1, 
+#sel-scrollbar-2, #sel-track-2, #sel-dragBar-2,
+#sel-scrollbar-3, #sel-track-3, #sel-dragBar-3 {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Spinner for when it's translating a page */
+
+.TnITTtw-cta-button-layout {
+    position: relative;
+    display: inline;
+}
+
+.TnITTtw-spinner {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+}
+  
+  @media screen and (max-width: 800px) {
+    .TnITTtw-spinner {
+      top: 28px;
+    }
+  }
+
+  .TnITTtw-spinner.in-text {
+    display: block;
+    background: transparent;
+    position: initial;
+  }
+
+  .TnITTtw-spinner.left {
+    text-align: left;
+  }
+  
+  .TnITTtw-spinner > div {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(0, 71, 46);
+  
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+
+  .TnITTtw-spinner.in-text > div {
+    background-color: #000;
+  }
+  
+  .TnITTtw-spinner .TnITTtw-bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .TnITTtw-spinner .TnITTtw-bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }</style><style type="text/css">.ui_selector, .TnITTtw-ui_selector {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    display: inline-block;
+}
+
+.ui_selector .select, .TnITTtw-ui_selector .TnITTtw-select {
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid rgba(200, 199, 204, 0.5);
+    padding: 10px 15px;
+    width: 201px;
+    -webkit-user-select: none;
+    cursor: pointer;
+    border-radius: 11px;
+    display: inline-block;
+    background-image: -webkit-linear-gradient(top, #FAFAFA, #F6F6F6);
+    background-image: -moz-linear-gradient(top, #FAFAFA, #F6F6F6);
+    background-size: auto 48px;
+    background-position: 0px -11px;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.10);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dark-mode .ui_selector .select, 
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select {
+    background-image: -webkit-linear-gradient(top, #4A4A49, #40403F);
+    background-image: -moz-linear-gradient(top, #4A4A49, #40403F);
+    color: #FFF;
+    border-color: #747473;
+}
+
+.ui_selector .select:hover,
+.TnITTtw-ui_selector .TnITTtw-select:hover {
+    color: #424242;
+    background-image: -webkit-linear-gradient(top, #FAFAFA, #FAFAFA);
+    background-image: -moz-linear-gradient(top, #FAFAFA, #FAFAFA);
+}
+
+.ui_selector .select:active,
+.TnITTtw-ui_selector .TnITTtw-select:active {
+    color: #6d6d72;
+    background-image: -webkit-linear-gradient(top, #F6F6F6, #F6F6F6);
+    background-image: -moz-linear-gradient(top, #F6F6F6, #F6F6F6);
+}
+
+.dark-mode .ui_selector .select:hover,
+.dark-mode .ui_selector .select:active,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select:hover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-select:active {
+    background-image: -webkit-linear-gradient(top, #4A4A49, #4A4A49);
+    background-image: -moz-linear-gradient(top, #4A4A49, #4A4A49);
+    color: #FFF;
+    border-color: #747473;
+}
+
+.ui_selector .select .detected-ico,
+.TnITTtw-ui_selector .TnITTtw-select .TnITTtw-detected-ico {
+    display: inline-block;
+}
+
+.ui_selector .active, .ui_selector .active:hover, .ui_selector .active:active,
+.TnITTtw-ui_selector .TnITTtw-active, .TnITTtw-ui_selector .TnITTtw-active:hover, .TnITTtw-ui_selector .TnITTtw-active:active {
+    box-shadow: 0 -1px 15px -10px rgba(0, 0, 0, 0.85) !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #F3F3F3;
+}
+
+.sliding-text,
+.TnITTtw-sliding-text {
+    position: relative;
+}
+
+.ui_selector .options,
+.TnITTtw-ui_selector .TnITTtw-options {
+    margin-left: 0px;
+    margin-top: -4px;
+    background: #fff;
+    border: 1px solid rgba(200, 199, 204, 0.5);
+    width: 231px;
+    overflow: hidden;
+    max-height: 313px;
+    position: absolute;
+    font-size: 12px;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    display: none;
+}
+
+.ui_selector .options.standalone,
+.TnITTtw-ui_selector .TnITTtw-options.TnITTtw-standalone {
+    border-radius: 11px;
+    margin-top: 16px;
+}
+
+/* for now, it can only be on the top */
+.ui_selector .options-arrow,
+.TnITTtw-ui_selector .TnITTtw-options-arrow {
+    display: none;
+    position: absolute;
+    width: 32px !important;
+    height: 18px !important;
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/tt-dropdown-arrow.png);
+    background-size: 32px 18px;
+    transform: rotate(180deg);
+    margin-top: -1px;
+}
+
+.dark-mode .ui_selector .options-arrow,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options-arrow {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/tt-dropdown-arrow-dark.png);
+}
+
+.dark-mode .ui_selector .options,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options {
+    background: #525251;
+}
+
+.ui_selector .options ul,
+.TnITTtw-ui_selector .TnITTtw-options ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 232px;
+}
+
+.ui_selector .options ul li,
+.TnITTtw-ui_selector .TnITTtw-options ul li {
+    padding: 10px 0px;
+    -webkit-user-select: none;
+    text-align: center;
+    font-size: 17px;
+    -webkit-transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+    margin: 0 10px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.dark-mode .options ul li,
+.TnITTtw-dark-mode .TnITTtw-options ul li {
+    color: #fff;
+}
+
+.ui_selector .options ul li:last-child,
+.TnITTtw-ui_selector .TnITTtw-options ul li:last-child {
+    margin-bottom: 16px;
+}
+
+.ui_selector .options ul li.option:first-child,
+.ui_selector .options ul li.option_selected:first-child,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option:first-child,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option_selected:first-child {
+    margin-top: 16px;
+}
+
+.ui_selector .options ul li.whenHover,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-whenHover {
+    cursor: pointer;
+    background: #f3f3f3;
+    text-align: center;
+}
+
+.dark-mode .ui_selector .options ul li.whenHover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-whenHover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.ui_selector .options ul li.option_selected,
+.TnITTtw-ui_selector .TnITTtw-options ul li.TnITTtw-option_selected {
+    cursor: pointer;
+    background-image: linear-gradient(145deg, #01EF92, #00D8FB),
+    linear-gradient(35deg, rgba(1, 239, 146, 0.25), rgba(0, 216, 251, 0.25)) !important;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ui_selector .options ul .group,
+.ui_selector .options ul .group:hover,
+.ui_selector .options ul .group.whenHover,
+.TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group,
+.TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group:hover,
+.TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group.whenHover {
+    padding: 16px 10px;
+    color: #8e8e93;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    cursor: default;
+    background: #FFF;
+}
+
+.dark-mode .ui_selector .options ul .group,
+.dark-mode .ui_selector .options ul .group:hover,
+.dark-mode .ui_selector .options ul .group.whenHover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group:hover,
+.TnITTtw-dark-mode .TnITTtw-ui_selector .TnITTtw-options ul .TnITTtw-group.TnITTtw-whenHover {
+    color: #98989D;
+    background: #525251;
+}
+
+.group-element,
+.TnITTtw-group-element {
+    width: 153px;
+}
+
+.options .dd-search,
+.TnITTtw-options .TnITTtw-dd-search {
+    border-bottom: 1px solid rgba(200, 199, 204, 0.5);
+}
+
+.dark-mode .options .dd-search,
+.TnITTtw-dark-mode .TnITTtw-options .TnITTtw-dd-search {
+    border-bottom-color: #747473;
+}
+
+.dd-search .dd-input,
+.TnITTtw-dd-search .TnITTtw-dd-input {
+    padding: 16px;
+    padding-left: calc(16px * 3);
+    width: 168px;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, Ubuntu, sans-serif;
+    text-align: left;
+    color: #000;
+    font-size: 17px;
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/searchfield-icon.png);
+    background-position: 16px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: auto;
+}
+
+.dark-mode .dd-search .dd-input,
+.TnITTtw-dark-mode .TnITTtw-dd-search .TnITTtw-dd-input {
+    color: #FFF;
+    background-color: #525251;
+}
+
+.dd-search .dd-input:focus,
+.TnITTtw-dd-search .TnITTtw-dd-input:focus {
+    -webkit-transition: all 275ms cubic-bezier(0.23, 1, 0.32, 1);
+    outline: none;
+    text-align: left;
+}
+
+.dd-input::-webkit-input-placeholder,
+.TnITTtw-dd-input::-webkit-input-placeholder {
+    color: #8e8e93;
+}
+
+.search-failed-plaque,
+.TnITTtw-search-failed-plaque {
+    text-align: center;
+    padding: 20px;
+    color: #8e8e93;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.dark-mode .search-failed-plaque,
+.TnITTtw-dark-mode .TnITTtw-search-failed-plaque {
+    color: #98989D;
+}
+
+.rm-recent,
+.TnITTtw-rm-recent {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/regular-lang-remove.png);
+    background-size: 10px 10px;
+    top: 15px;
+    right: 10px;
+}
+
+.rm-recent:hover,
+.TnITTtw-rm-recent:hover {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/hover-lang-remove.png);
+}
+
+.rm-recent:active,
+.TnITTtw-rm-recent:active {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/down-lang-remove.png);
+}
+
+.option_selected .rm-recent,
+.TnITTtw-option_selected .TnITTtw-rm-recent {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/down-active-lang-remove.png);
+}
+
+.option_selected .rm-recent:hover,
+.TnITTtw-option_selected .TnITTtw-rm-recent:hover {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/hover-active-lang-remove.png);
+}
+
+.option_selected .rm-recent:active,
+.TnITTtw-option_selected .TnITTtw-rm-recent:active {
+    background-image: url(chrome-extension://ollghamalkmmhboihmhoaaobmamehjgn/res/images/ui/down-active-lang-remove.png);
+}
+
+.TnITTtw-hidden {
+    display: none;
+}</style><style type="text/css">/* This is not a zero-length file! */</style><style type="text/css">@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}</style></head>
 <body>
 <div id="app">
 
@@ -347,23 +1259,21 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
     <p class="sub">10軸トンマナ分析 × 完全憑依生成。メディアの「声」を深層から解析し、完璧に再現する究極のゴーストライティングツール。</p>
   </div>
   <div class="hdr-right">
-    <div class="badge"><div class="bdot"></div><span id="badge-lbl">0 媒体</span></div>
+    <div class="badge"><div class="bdot"></div><span id="badge-lbl">6 媒体</span></div>
     <button class="btn-hist" onclick="openDrawer()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
-      履歴<span class="hbadge" id="hbadge">0</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"></path></svg>
+      履歴<span class="hbadge" id="hbadge" style="display: flex;">9</span>
     </button>
   </div>
 </header>
 
 <div class="apibar">
   <span class="apibar-lbl">
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
+    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg>
     Gemini API Key
   </span>
   <input type="password" id="apiKey" placeholder="AIzaSy..." autocomplete="off" oninput="onKeyIn()">
-  <button class="btn-save-key" id="saveKeyBtn" onclick="saveKey()">
-    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>保存
-  </button>
+  <button class="btn-save-key saved" id="saveKeyBtn" onclick="saveKey()">✓ 保存済み</button>
   <div class="apibar-right">
     <span class="apibar-tip">取得: <a href="https://aistudio.google.com/app/apikey" target="_blank">aistudio.google.com</a></span>
     <span style="color:var(--muted);margin:0 4px;">·</span>
@@ -374,7 +1284,7 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
         <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
         <option value="gemini-2.5-pro">Gemini 2.5 Pro（最高精度）</option>
       </select>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </div>
   </div>
 </div>
@@ -383,13 +1293,13 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
   <span class="data-bar-lbl">📦 媒体データ</span>
   <div class="dbbtns">
     <button class="btn-data ex" onclick="exportMags()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>エクスポート（JSON）
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>エクスポート（JSON）
     </button>
     <button class="btn-data html" onclick="exportHtml()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>エクスポート（HTML・データ込み）
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>エクスポート（HTML・データ込み）
     </button>
     <button class="btn-data im" onclick="document.getElementById('importFile').click()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>インポート（JSON）
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>インポート（JSON）
     </button>
     <input type="file" id="importFile" accept=".json" onchange="importMags(event)" style="display:none">
   </div>
@@ -398,16 +1308,16 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
 
 <div class="tabs-nav">
   <button class="tab-btn active" data-tab="generate" onclick="switchTab('generate')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>記事生成
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>記事生成
   </button>
   <button class="tab-btn" data-tab="register" onclick="switchTab('register')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>媒体登録
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>媒体登録
   </button>
   <button class="tab-btn" data-tab="analyze" onclick="switchTab('analyze')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>AIトンマナ分析
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>AIトンマナ分析
   </button>
   <button class="tab-btn" data-tab="prompts" onclick="switchTab('prompts')">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>プロンプト集
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>プロンプト集
   </button>
 </div>
 
@@ -418,16 +1328,26 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
       <div class="field">
         <div class="lbl"><span class="req">*</span>雑誌・媒体を選択</div>
         <button class="mag-sel-btn" id="magSelBtn" onclick="openMagModal()">
-          <span class="msb-icon" id="selMagIcon">📰</span>
-          <span class="msb-text"><span class="msb-name" id="selMagName">媒体を選択してください</span><span class="msb-desc" id="selMagDesc">—</span></span>
+          <span class="msb-icon" id="selMagIcon">✨</span>
+          <span class="msb-text"><span class="msb-name" id="selMagName">CanCam 2026年6月号</span><span class="msb-desc" id="selMagDesc">「なりたい自分」を叶えたい、トレンドに敏感な20代〜30代前半の女性。ファッション、ビューティ、ライ…</span></span>
           <span class="msb-badge">選択</span>
         </button>
       </div>
       <div class="field">
         <div class="lbl">コーナー・テーマ（文体の揺らぎ）</div>
-        <div class="corner-grid" id="cornerGrid">
-          <div style="font-family:var(--mf);font-size:11px;color:var(--muted);padding:10px;text-align:center;">媒体を選択するとコーナーが表示されます</div>
-        </div>
+        <div class="corner-grid" id="cornerGrid"><button class="corner-btn sel" onclick="selCorner(this,0)">
+      <span class="c-ico">📌</span>
+      <span class="c-text"><span class="c-name">SK-II特集</span><span class="c-hint">冒頭はブランドの歴史や特集テーマを提示し、期待感を高める。展開では、キー成分や代表商品の…</span></span>
+      <span class="c-radio"><span class="c-rdot"></span></span>
+    </button><button class="corner-btn" onclick="selCorner(this,1)">
+      <span class="c-ico">💬</span>
+      <span class="c-text"><span class="c-name">韓国ビューティ旅特集</span><span class="c-hint">冒頭は「韓国ビューティ旅へ！」のようなキャッチーなタイトルで読者の興味を刺激し、旅のテー…</span></span>
+      <span class="c-radio"><span class="c-rdot"></span></span>
+    </button><button class="corner-btn" onclick="selCorner(this,2)">
+      <span class="c-ico">🔥</span>
+      <span class="c-text"><span class="c-name">「25歳からの色っぽ服」特集</span><span class="c-hint">冒頭は読者の年齢や悩みに寄り添う問いかけで開始。展開では、具体的なアイテムやコーディネー…</span></span>
+      <span class="c-radio"><span class="c-rdot"></span></span>
+    </button></div>
       </div>
       <div class="field">
         <div class="lbl">出力フォーマット</div>
@@ -454,16 +1374,115 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
       </div>
       <div class="field">
         <div class="lbl-row"><div class="lbl"><span class="req">*</span>記事テーマ・キーワード</div><span class="key-hint"><kbd>Ctrl</kbd>+<kbd>Enter</kbd> 生成</span></div>
-        <textarea id="themeInput" rows="4" placeholder="例：プチプラコスメのおすすめ5選&#10;例：夏のスキンケアルーティン公開&#10;例：韓国ファッション2025トレンドまとめ" onkeydown="onThemeKey(event)"></textarea>
+        <textarea id="themeInput" rows="4" placeholder="例：プチプラコスメのおすすめ5選
+例：夏のスキンケアルーティン公開
+例：韓国ファッション2025トレンドまとめ" onkeydown="onThemeKey(event)"></textarea>
       </div>
       <button class="btn-gen" id="genBtn" onclick="generate()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
         記事を生成する
       </button>
     </div></div>
-    <div class="gen-right" id="genRight">
-      <div class="gen-placeholder"><div class="plh-icon">&#8220;</div><p>媒体を選択し、テーマを入力して<br>記事を生成してください</p><p style="font-size:11.5px;color:var(--muted);font-family:var(--mf);font-style:normal;margin-top:4px;">生成結果がここに表示されます</p></div>
+    <div class="gen-right" id="genRight"><div class="result-card">
+    <div class="result-head">
+      <div class="result-meta">
+        <span style="font-size:18px;">✨</span>
+        <span class="r-tag m">CanCam 2026年6月号</span>
+        <span class="r-tag c">SK-II特集</span>
+        <span class="r-tag f">Web記事</span>
+      </div>
+      <button class="btn-copy" onclick="doCopy(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:11px;height:11px;"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>コピー
+      </button>
     </div>
+    <div class="result-body" id="resultBody">【2026年夏】賢く可愛くなろ♡CanCamインフルエンサーがガチ推しする！絶対買い♡プチプラコスメ５選✨
+
+夏のおしゃれって、洋服はもちろんだけど、メイクもガラッと変えたくなっちゃうよね😍！でも、トレンドアイテムってどんどん出てくるし、全部買ってたらお財布が…💸 なんて悩んでるあなた！大丈夫♡CanCam世代の私たちの強い味方、プチプラコスメだって、とーっても優秀なものがたくさんあるんですっ！
+
+今回は、CanCamインフルエンサーが「これは絶対買い♡」と太鼓判を押す、2026年夏におすすめのプチプラコスメを５つ厳選してご紹介しちゃいます！賢く可愛くなっちゃいましょ💄💖
+
+---
+
+### １．【CEZANNE】新作アイパレットでつくる♡透明感あふれる夏メイク✨
+
+まずご紹介するのは、みんな大好きCEZANNE（セザンヌ）の新作アイパレット！今年の夏は、透け感のあるシアーな発色がキーワード。このアイパレットは、まさにそんな気分を叶えてくれるんです😍
+
+【おすすめポイント】
+*   **絶妙なカラーリング**: 太陽みたいに明るいオレンジ系と、海みたいに涼しげなブルー系の２種類が登場！どっちも肌なじみが良くて、重ねるだけで奥行きのある目元に仕上がります。
+*   **上品なツヤ感**: パール配合で、まぶたにのせると上品なツヤがプラス。ギラつきすぎないから、オフィスにもデートにも◎。
+*   **崩れにくい**: 夏の気になるテカリも、これなら安心！一日中キレイな目元をキープしてくれますよ😉
+
+インフルエンサーのAちゃんも、「これ一つで旬顔になれる！他の色も集めたくなっちゃう♡」とヘビロテ中だそう。ぜひ、夏らしいヘルシーメイクに挑戦してみてね！
+
+---
+
+### ２．【CANMAKE】とろける使用感！幻の「クリームチーク」で上気したような血色感を演出💖
+
+続いては、CANMAKE（キャンメイク）から、一度使うと手放せなくなる「クリームチーク」をご紹介！まるで素肌からにじみ出るような、自然な血色感がたまらないんです🥺💕
+
+【おすすめポイント】
+*   **とろけるテクスチャー**: 指でポンポンとのせるだけで、肌に溶け込むようになじみます。ムラになりにくく、初心者さんでも使いやすいのが嬉しい！
+*   **じゅわっと発色**: 厚塗り感ゼロなのに、内側からポッと上気したような、みずみずしい血色感が生まれます。夏の日差しに映えること間違いなし！
+*   **ロングラスティング**: マスクメイクにも強い！一日中落ちにくく、つけたての可愛い血色感をキープしてくれます。
+
+インフルエンサーのB子ちゃんは、「もう何個リピートしたか分からないくらい溺愛♡夏はコーラル系でヘルシーに、秋はボルドー系で大人っぽく使いたい！」と熱弁していましたよ！
+
+---
+
+### ３．【Ririmew】あの人気YouTuberプロデュース！質感違いの「単色アイシャドウ」で差をつける👀
+
+お次は、美容系YouTuberの윰〇〇さんがプロデュースする「Ririmew（リリミュウ）」の単色アイシャドウ！「こんな色、欲しかった！」の声が続出するほど、とにかくカラーバリエーションが豊富で、どれも可愛すぎるんです😍
+
+【おすすめポイント】
+*   **質感と発色のバリエーション**: マット、パール、ラメなど、質感も様々。その日の気分やなりたいイメージに合わせて、自由に組み合わせを楽しめるのが魅力！
+*   **高密着でヨレにくい**: 粉飛びしにくく、まぶたにしっかりフィット。上品なラメ感も長時間キープしてくれます。
+*   **垢抜けカラー**: トレンド感満載のくすみカラーや、肌がきれいに見える絶妙な配色が揃っています。
+
+インフルエンサーのC子さんは、「このアイシャドウを使うだけで、一気にこなれた印象になれる！」とお気に入りの様子。単色でグラデーションを作ったり、他のアイシャドウに重ねてニュアンスチェンジしたり…使い方は無限大！
+
+---
+
+### ４．【excel】１本でサロン級！「スキニーリッチシャドウ」で品格アイをGET♡
+
+「プチプラなのにデパコス級！」と常に話題のexcel（エクセル）。中でも「スキニーリッチシャドウ」は、忙しい私たちにぴったりな優秀アイテムなんです✨
+
+【おすすめポイント】
+*   **簡単なのにプロ級の仕上がり**: ４色を順番に塗るだけで、自然な陰影と立体感のある、上品なグラデーションアイが完成！
+*   **肌なじみの良いカラー**: ベージュやブラウン系のベーシックカラーが中心なので、どんなファッションにも合わせやすく、オフィスシーンにも最適。
+*   **しっとり密着**: 粉っぽさがなく、まぶたにピタッと密着。乾燥が気になる季節でも、パサつかずキレイに仕上がります。
+
+インフルエンサーのD美さんは、「これさえあれば、メイク初心者さんでも失敗知らず！大人っぽくて上品な目元になれるから、手放せません！」と絶賛していましたよ。
+
+---
+
+### ５．【rom&amp;nd】韓国トレンド最先端！「ジューシーラスティングティント」でぷるぷるリップに💋
+
+最後は、韓国コスメブランドrom&amp;nd（ロムアンド）の大人気リップ「ジューシーラスティングティント」！一度塗ると、そのみずみずしさと発色の美しさに驚くはず…！
+
+【おすすめポイント】
+*   **ツヤ感と色持ちの良さ**: 塗った瞬間、ぷるぷるとしたジューシーな質感に。時間が経っても色が落ちにくく、マスクメイクにも強いのが嬉しい！
+*   **豊富なカラーバリエーション**: ヌーディーカラーから鮮やかなレッドまで、あなたのお気に入りがきっと見つかるはず。夏は明るいコーラル系やピンク系がおすすめ♡
+*   **甘い香りがたまらない♡**: 塗るたびに気分が上がる、甘くてフルーティーな香りも魅力の一つ。
+
+インフルエンサーのE花さんも、「このティントに出会ってから、他のリップが使えなくなったかも…！唇がぷるんとなって、可愛すぎるんです♡」と夢中になっているそう。
+
+---
+
+いかがでしたか？✨
+今回は、CanCamインフルエンサーがリアルに愛用している、おすすめのプチプラコスメを５つご紹介しました！
+
+「なりたい自分」に近づくために、賢くトレンドを取り入れるのが私たち世代のスタイル♡
+今回ご紹介したコスメを参考に、ぜひ夏メイクを楽しんでくださいね！
+
+この記事が参考になったら、ぜひ「♡」ボタンで教えてくださいね！
+これからも、みんなの「欲しい！」が見つかるような情報をたくさんお届けしていきますので、お楽しみに！💖
+
+#プチプラコスメ #夏メイク #2026年夏 #キャンメイク #セザンヌ #リリミュウ #エクセル #ロムアンド #コスメ紹介 #インフルエンサー #CanCam #賢く可愛くなる</div>
+    <div class="result-foot">
+      <span class="wc">📝 2,882 字</span>
+      <span class="wc" style="color:var(--accent);font-size:10px;">テーマ：プチプラコスメのおすすめ五選</span>
+    </div>
+  </div></div>
   </div>
 </div>
 
@@ -472,7 +1491,7 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
   <div class="sec-hd"><h2>媒体（雑誌）登録</h2><p>雑誌・SNSアカウントのトンマナ・編集方針を手動で登録・編集します。AI分析結果もここで微調整できます。</p></div>
   <div class="reg-grid">
     <div class="form-card">
-      <div class="fc-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>基本情報</div>
+      <div class="fc-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>基本情報</div>
       <div class="field"><div class="lbl"><span class="req">*</span>雑誌・アカウント名</div><input type="text" id="fMagName" placeholder="例：美容垢まとめ、プチプラライフ、韓国コスメ部"></div>
       <div class="field"><div class="lbl">アイコン（絵文字1文字）</div><input type="text" id="fMagIcon" placeholder="💄" style="font-size:20px;letter-spacing:6px;max-width:100px;"></div>
       <div class="field"><div class="lbl">媒体の立ち位置・ターゲット読者</div><textarea id="fMagTarget" rows="3" placeholder="例：20代〜30代の美容・ファッション好き女性。プチプラから韓国コスメまで幅広くレビューするSNSアカウント。失敗談を交えた共感型コンテンツが特徴。"></textarea></div>
@@ -483,22 +1502,94 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
       </div>
     </div>
     <div class="form-card">
-      <div class="fc-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>コーナー別・文体の揺らぎ</div>
+      <div class="fc-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>コーナー別・文体の揺らぎ</div>
       <div class="sub-lbl" style="margin-bottom:10px;">テーマ別の文体変化を設定。<strong>「○○なトーンで」は禁止</strong>。「冒頭は〜で始め、〜を必ず含め、〜で締める」という構造指示形式で記述してください。</div>
-      <div id="fluctItems"></div>
-      <button class="add-btn" onclick="addFluct()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>コーナー/テーマを追加</button>
-      <div class="fc-title" style="margin-top:10px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>記事の鉄板構成パターン</div>
+      <div id="fluctItems"><div style="font-family:var(--mf);font-size:11px;color:var(--muted);padding:8px 0;text-align:center;">コーナーを追加してください</div></div>
+      <button class="add-btn" onclick="addFluct()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>コーナー/テーマを追加</button>
+      <div class="fc-title" style="margin-top:10px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>記事の鉄板構成パターン</div>
       <div class="sub-lbl" style="margin-bottom:10px;">この媒体によく見られる記事構成を番号順で記述します。</div>
-      <div id="patternItems"></div>
-      <button class="add-btn" onclick="addPattern()" style="margin-top:6px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>構成パターンを追加</button>
+      <div id="patternItems"><div style="font-family:var(--mf);font-size:11px;color:var(--muted);padding:8px 0;text-align:center;">パターンを追加してください</div></div>
+      <button class="add-btn" onclick="addPattern()" style="margin-top:6px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px;"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>構成パターンを追加</button>
     </div>
   </div>
   <div class="form-actions" style="margin-top:16px;">
     <button class="btn-sec" id="editCancelBtn" onclick="resetForm()" style="display:none">キャンセル</button>
-    <button class="btn-pri" onclick="saveMag()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:11px;height:11px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg><span id="saveBtnText">媒体を登録する</span></button>
+    <button class="btn-pri" onclick="saveMag()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:11px;height:11px;"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg><span id="saveBtnText">媒体を登録する</span></button>
   </div>
   <div class="sec-hd" style="margin-top:36px;"><h2>登録済み媒体</h2></div>
-  <div class="mag-list-grid" id="magListGrid"></div>
+  <div class="mag-list-grid" id="magListGrid">
+    <div class="ml-card">
+      
+      <div class="ml-head">
+        <div class="ml-icon">✨</div>
+        <div class="ml-info"><span class="ml-name">CanCam 2026年6月号</span><span class="ml-target">「なりたい自分」を叶えたい、トレンドに敏感な20代〜30代前半の女性。ファッション、ビューティ、ライ…</span></div>
+      </div>
+      <div class="ml-actions">
+        <button class="btn-use" onclick="useInGen('mag_1777807400075')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>生成に使う</button>
+        <button class="btn-edit" onclick="editMag('mag_1777807400075')">編集</button>
+        <button class="btn-del" onclick="deleteMag('mag_1777807400075')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></button>
+      </div>
+    </div>
+    <div class="ml-card">
+      
+      <div class="ml-head">
+        <div class="ml-icon">✨</div>
+        <div class="ml-info"><span class="ml-name">Oggi</span><span class="ml-target">「自分らしい」を大切にしたい、知的好奇心旺盛な30代〜40代の働く女性。ファッション、ビューティ、ラ…</span></div>
+      </div>
+      <div class="ml-actions">
+        <button class="btn-use" onclick="useInGen('mag_1777804098592')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>生成に使う</button>
+        <button class="btn-edit" onclick="editMag('mag_1777804098592')">編集</button>
+        <button class="btn-del" onclick="deleteMag('mag_1777804098592')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></button>
+      </div>
+    </div>
+    <div class="ml-card">
+      
+      <div class="ml-head">
+        <div class="ml-icon">💄</div>
+        <div class="ml-info"><span class="ml-name">LDK the Beauty</span><span class="ml-target">美容に関心があり、情報収集に積極的な20〜40代女性。最新コスメやスキンケア情報はもちろん、商品の実…</span></div>
+      </div>
+      <div class="ml-actions">
+        <button class="btn-use" onclick="useInGen('mag_1777797392905')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>生成に使う</button>
+        <button class="btn-edit" onclick="editMag('mag_1777797392905')">編集</button>
+        <button class="btn-del" onclick="deleteMag('mag_1777797392905')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></button>
+      </div>
+    </div>
+    <div class="ml-card">
+      
+      <div class="ml-head">
+        <div class="ml-icon">💄</div>
+        <div class="ml-info"><span class="ml-name">コスメ垢 by みき（架空）</span><span class="ml-target">20代〜30代の美容・コスメ好き女性。プチプラから韓国コスメ・デパコスまで幅広くレビュー。アフィリエ…</span></div>
+      </div>
+      <div class="ml-actions">
+        <button class="btn-use" onclick="useInGen('mag_beauty')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>生成に使う</button>
+        <button class="btn-edit" onclick="editMag('mag_beauty')">編集</button>
+        <button class="btn-del" onclick="deleteMag('mag_beauty')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></button>
+      </div>
+    </div>
+    <div class="ml-card">
+      
+      <div class="ml-head">
+        <div class="ml-icon">💰</div>
+        <div class="ml-info"><span class="ml-name">プチプラ生活研究所（架空）</span><span class="ml-target">節約・コスパ志向の20〜40代。100均・セリア・ダイソー・しまむら等のプチプラアイテムを中心に生活…</span></div>
+      </div>
+      <div class="ml-actions">
+        <button class="btn-use" onclick="useInGen('mag_puchi')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>生成に使う</button>
+        <button class="btn-edit" onclick="editMag('mag_puchi')">編集</button>
+        <button class="btn-del" onclick="deleteMag('mag_puchi')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></button>
+      </div>
+    </div>
+    <div class="ml-card">
+      
+      <div class="ml-head">
+        <div class="ml-icon">🌿</div>
+        <div class="ml-info"><span class="ml-name">ヘルシー女子部（架空）</span><span class="ml-target">健康・美容・ウェルネスに関心の高い20〜35歳女性。食事制限なし・無理なし・継続できるをモットーに、…</span></div>
+      </div>
+      <div class="ml-actions">
+        <button class="btn-use" onclick="useInGen('mag_healthy')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:10px;height:10px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>生成に使う</button>
+        <button class="btn-edit" onclick="editMag('mag_healthy')">編集</button>
+        <button class="btn-del" onclick="deleteMag('mag_healthy')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4h6v2"></path></svg></button>
+      </div>
+    </div></div>
 </div>
 
 <!-- TAB C: AI ANALYSIS -->
@@ -515,7 +1606,7 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
           <div class="lbl">PDF・画像ファイル（最大20件）</div>
           <div class="sub-lbl">複数ファイルをアップロードするほど分析精度が上がります。10軸の深層分析には5件以上を推奨します。</div>
           <div class="fzone" id="fileZone" ondragover="onDragOver(event)" ondragleave="onDragLeave()" ondrop="onDrop(event)">
-            <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple onchange="onFileSelect(event)">
+            <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple="" onchange="onFileSelect(event)">
             <div class="fzone-inner">
               <div class="fzone-icon">📁</div>
               <div class="fzone-text">クリックまたはドラッグ＆ドロップ</div>
@@ -524,23 +1615,119 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
             </div>
           </div>
           <div class="flist" id="flist"></div>
-          <div id="fClearWrap" style="display:none;"><button class="btn-clear" onclick="clearFiles()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:11px;height:11px;"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/></svg>すべて削除</button></div>
+          <div id="fClearWrap" style="display:none;"><button class="btn-clear" onclick="clearFiles()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:11px;height:11px;"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path></svg>すべて削除</button></div>
         </div>
         <div class="field">
           <div class="lbl">分析用テキスト（コピペ・補足）</div>
           <div class="sub-lbl">ファイルに加えてテキストも貼り付けると精度が上がります。「---」で複数記事を区切れます。</div>
-          <textarea id="anaText" rows="7" placeholder="雑誌の記事テキストをここに貼り付け…&#10;&#10;---（記事の区切り）---&#10;&#10;複数記事を貼り付けるほど、より正確に10軸を分析できます。"></textarea>
+          <textarea id="anaText" rows="7" placeholder="雑誌の記事テキストをここに貼り付け…
+
+---（記事の区切り）---
+
+複数記事を貼り付けるほど、より正確に10軸を分析できます。"></textarea>
         </div>
         <div class="field"><div class="lbl">補足情報（任意）</div><textarea id="anaSuppl" rows="2" placeholder="例：美容系SNSアカウント、主な読者は20代後半女性、アフィリエイト記事が中心、PR表記は文末に（PR）"></textarea></div>
         <button class="btn-gen" id="anaBtn" onclick="runAnalysis()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
           10軸トンマナ分析を実行する
         </button>
         <details class="prompt-reveal" id="anaPromptReveal">
           <summary>📋 分析プロンプトを確認・コピーする</summary>
           <div class="prompt-box">
             <button class="btn-copy-prompt" onclick="copyPrompt('anaPromptText', this)">コピー</button>
-            <pre id="anaPromptText"></pre>
+            <pre id="anaPromptText"># あなたの役割
+あなたは「日本のSNSメディア・雑誌・デジタルコンテンツのエディトリアルスタイル分析スペシャリスト」です。
+提供されたサンプル（テキスト・PDF・画像）を精読・精査し、所属ライターが対象メディアの「声」を即座かつ完璧に模倣できる、具体的かつ構造的な「スタイルガイド＋JSONプロフィール」を出力します。
+
+# 分析の目的
+このメディアの「声」に完全に憑依したライターを1時間で育成できるレベルの指示書を作ること。
+
+# 分析の10軸（全軸を必ず分析すること）
+
+① 文末・語尾の型
+   - 断定（だ・である・です）/ 疑問（？・でしょうか）/ 体言止め / 感嘆（！）の実際の比率
+   - 語尾の「揺れ」のルール（どの場面でタメ口→丁寧語へ切り替えるか）
+   - 実際に観察されたパターンを〈引用〉タグで2〜3例必ず示すこと
+
+② リズム・テンポ
+   - 1文の平均文字数と長さ分布の傾向（短文スパート型 vs 長文展開型）
+   - 句読点（、。）の打ち方の癖
+   - 改行の頻度・タイミングのルール
+   - 段落構成のパターン（1段落何行が多いか）
+
+③ 語彙マップ
+   - 頻出ワード・フレーズ（実際に観察されたものを引用して列挙）
+   - このメディア固有の言い回し・造語・カタカナ語の傾向
+   - 絶対に使わないワード（禁止語・避けるべき表現）
+   - 業界用語・専門用語の扱い方（説明するか・しないか）
+
+④ フック構造
+   - 冒頭の「つかみ」の型（実際に観察されたパターンを2〜3例引用）
+   - 何文字・何行以内で読者を引き込んでいるか
+   - 「問いかけ型」「共感型」「衝撃事実型」「自己開示型」のどれを多用するか
+
+⑤ 感情温度・感情曲線の設計
+   - 記事全体の感情の流れ（共感→問題提起→解決→安心→行動など）
+   - 「煽り」の強度と入れ方のタイミング
+   - ポジティブ・ネガティブ要素の配合比率と処理法
+
+⑥ CTA（行動喚起）設計
+   - CTAの種類（購買誘導・フォロー・コメント・保存・シェア）と頻度
+   - 何段落目・どのタイミングでCTAを入れるか
+   - CTAに使われる言葉の型（強弱・緊急感の差）
+
+⑦ SNS固有ルール
+   - 絵文字の密度（文ごと・段落ごとなど）と使用される絵文字の種類・傾向
+   - ハッシュタグの数・位置・選び方の傾向
+   - 文体のくだけ具合（タメ口・丁寧語・混在の比率）
+
+⑧ SNSアフィリエイト固有軸【特に重要】
+   - 商品紹介・購買誘導のタイミング（何段落目か・全体の何割を占めるか）
+   - PR・案件・提供品の「馴染ませ方」のパターン（表記方法・前後の文脈の作り方）
+   - ネガティブ要素（デメリット・気になる点）の処理法と転換フレーズの型
+   - 価格・数値・ビフォーアフターの提示の仕方
+
+⑨ 信頼構築・権威付けの型
+   - 自己開示の深さと種類（経歴・失敗談・実体験・数字実績など）
+   - 「なぜ私が言えるのか」の根拠の示し方
+   - 読者との「距離感」の設定法
+
+⑩ テーマ別文体の揺らぎ
+   - テーマが変わると文体はどう変化するか（コスメ紹介 vs 体験談 vs ダイエット等）
+   - 各テーマでの「冒頭〜展開〜締め」の型を具体的な構造指示として記述
+
+# 制約事項（絶対厳守）
+- 一般論・抽象表現は一切禁止。サンプルから「実際に観察された表現・パターン」のみを根拠として記述
+- 「○○なトーンで」などの曖昧な指示は禁止。「冒頭は〜で始め、〜を必ず含め、〜で締める」という明確な構造指示にすること
+- サンプルが少ない場合（1〜2記事程度）は各項目末尾に「※サンプル不足のため推測を含む」と明記
+- 実際のサンプルから引用する際は〈引用〉〈/引用〉タグで囲むこと
+
+# 出力フォーマット（この順番・構成で必ず出力すること）
+
+## 1. メディアの「声」全体サマリー
+キャッチコピー1行 + 全体トーンの説明3〜5文
+
+## 2. 10軸スタイル詳細分析
+各軸ごとに、観察された実例を〈引用〉タグで示しながら具体的に記述
+
+## 3. コーナー（テーマ）別 執筆構造テンプレート
+テーマごとに「冒頭〜展開〜締め」の型を箇条書きで指示（「○○なトーンで」禁止）
+
+## 4. ライター向け 納品前チェックリスト
+トーン確認用5〜7項目を「〜になっているか？」形式で記述
+
+## 5. メディアプロフィールJSON
+以下のスキーマに従い、記事生成機能で使用するJSONをコードブロックで出力:
+{
+  "name": "媒体名",
+  "icon": "絵文字1文字",
+  "target": "ターゲット読者・媒体の立ち位置（200字以内）",
+  "tone": "ベーストンマナー・語彙ルール（400字以内）：文末の特徴、頻出語彙、禁止語、絵文字ルール、口調の温度感を具体的に",
+  "fluctuations": [
+    {"name": "コーナー名（絵文字込み）", "desc": "冒頭は〜で始め、〜を必ず含め、〜で締める（構造指示形式）"}
+  ],
+  "patterns": ["構成要素1", "構成要素2", "構成要素3", "構成要素4", "構成要素5"]
+}</pre>
           </div>
         </details>
       </div>
@@ -549,7 +1736,7 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
       <div style="position:sticky;top:16px;display:flex;flex-direction:column;gap:12px;">
         <div id="anaPrev">
           <div class="form-card">
-            <div class="fc-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>分析プレビュー</div>
+            <div class="fc-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>分析プレビュー</div>
             <div style="text-align:center;padding:32px 16px;font-family:var(--sf);font-style:italic;font-size:13.5px;color:var(--muted);"><div style="font-size:40px;margin-bottom:12px;opacity:.2;">🔬</div>PDFや記事テキストをアップロードして<br>「分析を実行する」を押すと<br>10軸深層レポートが表示されます</div>
           </div>
         </div>
@@ -561,25 +1748,349 @@ kbd{display:inline-block;background:var(--surface3);border:1px solid var(--borde
 <!-- TAB D: PROMPTS -->
 <div class="tab-panel" id="tab-prompts">
   <div class="sec-hd"><h2>プロンプト集</h2><p>このツールで使われているすべてのプロンプトを確認・コピーできます。外部ツールやChatGPT、他のGeminiプロジェクトでもそのまま活用可能です。</p></div>
-  <div class="prompt-lib-grid" id="promptLibGrid"></div>
+  <div class="prompt-lib-grid" id="promptLibGrid">
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">🔬 AIトンマナ分析プロンプト（10軸深層モデル）</span>
+        <span class="plc-badge">System Prompt</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-0"># あなたの役割
+あなたは「日本のSNSメディア・雑誌・デジタルコンテンツのエディトリアルスタイル分析スペシャリスト」です。
+提供されたサンプル（テキスト・PDF・画像）を精読・精査し、所属ライターが対象メディアの「声」を即座かつ完璧に模倣できる、具体的かつ構造的な「スタイルガイド＋JSONプロフィール」を出力します。
+
+# 分析の目的
+このメディアの「声」に完全に憑依したライターを1時間で育成できるレベルの指示書を作ること。
+
+# 分析の10軸（全軸を必ず分析すること）
+
+① 文末・語尾の型
+   - 断定（だ・である・です）/ 疑問（？・でしょうか）/ 体言止め / 感嘆（！）の実際の比率
+   - 語尾の「揺れ」のルール（どの場面でタメ口→丁寧語へ切り替えるか）
+   - 実際に観察されたパターンを〈引用〉タグで2〜3例必ず示すこと
+
+② リズム・テンポ
+   - 1文の平均文字数と長さ分布の傾向（短文スパート型 vs 長文展開型）
+   - 句読点（、。）の打ち方の癖
+   - 改行の頻度・タイミングのルール
+   - 段落構成のパターン（1段落何行が多いか）
+
+③ 語彙マップ
+   - 頻出ワード・フレーズ（実際に観察されたものを引用して列挙）
+   - このメディア固有の言い回し・造語・カタカナ語の傾向
+   - 絶対に使わないワード（禁止語・避けるべき表現）
+   - 業界用語・専門用語の扱い方（説明するか・しないか）
+
+④ フック構造
+   - 冒頭の「つかみ」の型（実際に観察されたパターンを2〜3例引用）
+   - 何文字・何行以内で読者を引き込んでいるか
+   - 「問いかけ型」「共感型」「衝撃事実型」「自己開示型」のどれを多用するか
+
+⑤ 感情温度・感情曲線の設計
+   - 記事全体の感情の流れ（共感→問題提起→解決→安心→行動など）
+   - 「煽り」の強度と入れ方のタイミング
+   - ポジティブ・ネガティブ要素の配合比率と処理法
+
+⑥ CTA（行動喚起）設計
+   - CTAの種類（購買誘導・フォロー・コメント・保存・シェア）と頻度
+   - 何段落目・どのタイミングでCTAを入れるか
+   - CTAに使われる言葉の型（強弱・緊急感の差）
+
+⑦ SNS固有ルール
+   - 絵文字の密度（文ごと・段落ごとなど）と使用される絵文字の種類・傾向
+   - ハッシュタグの数・位置・選び方の傾向
+   - 文体のくだけ具合（タメ口・丁寧語・混在の比率）
+
+⑧ SNSアフィリエイト固有軸【特に重要】
+   - 商品紹介・購買誘導のタイミング（何段落目か・全体の何割を占めるか）
+   - PR・案件・提供品の「馴染ませ方」のパターン（表記方法・前後の文脈の作り方）
+   - ネガティブ要素（デメリット・気になる点）の処理法と転換フレーズの型
+   - 価格・数値・ビフォーアフターの提示の仕方
+
+⑨ 信頼構築・権威付けの型
+   - 自己開示の深さと種類（経歴・失敗談・実体験・数字実績など）
+   - 「なぜ私が言えるのか」の根拠の示し方
+   - 読者との「距離感」の設定法
+
+⑩ テーマ別文体の揺らぎ
+   - テーマが変わると文体はどう変化するか（コスメ紹介 vs 体験談 vs ダイエット等）
+   - 各テーマでの「冒頭〜展開〜締め」の型を具体的な構造指示として記述
+
+# 制約事項（絶対厳守）
+- 一般論・抽象表現は一切禁止。サンプルから「実際に観察された表現・パターン」のみを根拠として記述
+- 「○○なトーンで」などの曖昧な指示は禁止。「冒頭は〜で始め、〜を必ず含め、〜で締める」という明確な構造指示にすること
+- サンプルが少ない場合（1〜2記事程度）は各項目末尾に「※サンプル不足のため推測を含む」と明記
+- 実際のサンプルから引用する際は〈引用〉〈/引用〉タグで囲むこと
+
+# 出力フォーマット（この順番・構成で必ず出力すること）
+
+## 1. メディアの「声」全体サマリー
+キャッチコピー1行 + 全体トーンの説明3〜5文
+
+## 2. 10軸スタイル詳細分析
+各軸ごとに、観察された実例を〈引用〉タグで示しながら具体的に記述
+
+## 3. コーナー（テーマ）別 執筆構造テンプレート
+テーマごとに「冒頭〜展開〜締め」の型を箇条書きで指示（「○○なトーンで」禁止）
+
+## 4. ライター向け 納品前チェックリスト
+トーン確認用5〜7項目を「〜になっているか？」形式で記述
+
+## 5. メディアプロフィールJSON
+以下のスキーマに従い、記事生成機能で使用するJSONをコードブロックで出力:
+{
+  "name": "媒体名",
+  "icon": "絵文字1文字",
+  "target": "ターゲット読者・媒体の立ち位置（200字以内）",
+  "tone": "ベーストンマナー・語彙ルール（400字以内）：文末の特徴、頻出語彙、禁止語、絵文字ルール、口調の温度感を具体的に",
+  "fluctuations": [
+    {"name": "コーナー名（絵文字込み）", "desc": "冒頭は〜で始め、〜を必ず含め、〜で締める（構造指示形式）"}
+  ],
+  "patterns": ["構成要素1", "構成要素2", "構成要素3", "構成要素4", "構成要素5"]
+}</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-0',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">✍️ 記事生成プロンプト（完全憑依テンプレート）</span>
+        <span class="plc-badge">System Prompt</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-1"># あなたの役割
+あなたは「{mag_name}」という媒体の熟練ライターです。
+このメディアの文体・語彙・思想・リズム・感情設計に完全に憑依し、
+外部の人間が読んで「これは絶対にこのメディアが書いた」と確信するレベルのコンテンツを生成します。
+
+# このメディアの完全プロフィール
+
+【媒体名】{mag_name}
+【ターゲット・立ち位置】{target}
+【ベーストンマナー・語彙ルール】{tone}
+
+{corner_block}
+{pattern_block}
+
+# 出力フォーマット
+フォーマット：{fmt_label}
+フォーマット固有指示：{fmt_instructions}
+
+# 絶対厳守ルール
+- このメディアのトンマナを一瞬たりとも外れないこと
+- 冒頭の説明文（「これは〜です」など）は不要。本文のみ出力
+- 生成後に自分でトンマナチェックを行い、ズレがあれば修正してから出力すること</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-1',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">🌐 Web記事フォーマット指示</span>
+        <span class="plc-badge">Format Instruction</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-2">Webメディア向け記事。見出し（■または【】）と小見出しを使用。冒頭のリードで読者を引き込み、最後に明確なCTAを入れる。Markdownではなくプレーンテキストで出力。</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-2',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">𝕏 X (Twitter) ポスト指示</span>
+        <span class="plc-badge">Format Instruction</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-3">X (Twitter) ポスト。140〜280文字以内厳守。スレッド化する場合は「1/n」「2/n」で区切る。冒頭20文字で掴む。ハッシュタグは2〜3個まで文末に。</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-3',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">▶ YouTube Shorts 台本指示</span>
+        <span class="plc-badge">Format Instruction</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-4">YouTube Shorts台本（縦型・1分以内）。冒頭3秒で視聴継続させる強烈なフック文から始める。全編を話し言葉のスクリプト形式で書く。最後は「チャンネル登録よろしく！」などのCTA。</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-4',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">🎬 YouTube 長尺動画台本指示</span>
+        <span class="plc-badge">Format Instruction</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-5">YouTube長尺動画台本（10〜15分想定）。フリートーク・会話スタイルで3,000〜5,000文字。「〜だよね」「〜じゃない？」など視聴者への語りかけを多用。【セクション名】で章立て。中盤に登録促進を自然に挟む。</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-5',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">📷 Instagram キャプション指示</span>
+        <span class="plc-badge">Format Instruction</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-6">Instagramキャプション。300字以内。最初の2行でスワイプを止める強いフック（改行で見せる）。絵文字はこのメディアのルールに完全準拠。末尾にハッシュタグ5〜10個。「保存してね」「コメントで教えて」などCTA必須。</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-6',this)">📋 コピー</button></div>
+    </div>
+    <div class="prompt-lib-card">
+      <div class="plc-head">
+        <span class="plc-title">📄 短文コラム指示</span>
+        <span class="plc-badge">Format Instruction</span>
+      </div>
+      <div class="plc-body"><pre id="plc-pre-7">短文コラム・ブログ記事。600〜1,200文字。リードで共感を掴み、本文で情報提供、まとめで行動提案。小見出し2〜3個まで。</pre></div>
+      <div class="plc-foot"><button class="btn-copy-pl" onclick="copyPrompt('plc-pre-7',this)">📋 コピー</button></div>
+    </div></div>
 </div>
 
 <!-- Mag Modal -->
-<div id="magOverlay" onclick="closeMagModal(event)">
+<div id="magOverlay" onclick="closeMagModal(event)" class="">
   <div id="magModal">
-    <div class="mm-head"><span class="mm-title">媒体を選択</span><button class="mm-close" onclick="closeMagModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+    <div class="mm-head"><span class="mm-title">媒体を選択</span><button class="mm-close" onclick="closeMagModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div>
     <div class="mm-sw"><input class="mm-search" id="mmSearch" placeholder="媒体名で検索…" oninput="renderMagModal()"></div>
-    <div class="mm-body" id="mmBody"></div>
+    <div class="mm-body" id="mmBody">
+    <button class="mm-card sel" onclick="selectMag('mag_1777807400075')">
+      <span class="mm-card-icon">✨</span>
+      <span class="mm-card-body">
+        <span class="mm-card-name">CanCam 2026年6月号</span>
+        <span class="mm-card-desc">「なりたい自分」を叶えたい、トレンドに敏感な20代〜30代前半の…</span>
+      </span>
+      <span class="mm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+    </button>
+    <button class="mm-card" onclick="selectMag('mag_1777804098592')">
+      <span class="mm-card-icon">✨</span>
+      <span class="mm-card-body">
+        <span class="mm-card-name">Oggi</span>
+        <span class="mm-card-desc">「自分らしい」を大切にしたい、知的好奇心旺盛な30代〜40代の働…</span>
+      </span>
+      <span class="mm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+    </button>
+    <button class="mm-card" onclick="selectMag('mag_1777797392905')">
+      <span class="mm-card-icon">💄</span>
+      <span class="mm-card-body">
+        <span class="mm-card-name">LDK the Beauty</span>
+        <span class="mm-card-desc">美容に関心があり、情報収集に積極的な20〜40代女性。最新コスメ…</span>
+      </span>
+      <span class="mm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+    </button>
+    <button class="mm-card" onclick="selectMag('mag_beauty')">
+      <span class="mm-card-icon">💄</span>
+      <span class="mm-card-body">
+        <span class="mm-card-name">コスメ垢 by みき（架空）</span>
+        <span class="mm-card-desc">20代〜30代の美容・コスメ好き女性。プチプラから韓国コスメ・デ…</span>
+      </span>
+      <span class="mm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+    </button>
+    <button class="mm-card" onclick="selectMag('mag_puchi')">
+      <span class="mm-card-icon">💰</span>
+      <span class="mm-card-body">
+        <span class="mm-card-name">プチプラ生活研究所（架空）</span>
+        <span class="mm-card-desc">節約・コスパ志向の20〜40代。100均・セリア・ダイソー・しま…</span>
+      </span>
+      <span class="mm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+    </button>
+    <button class="mm-card" onclick="selectMag('mag_healthy')">
+      <span class="mm-card-icon">🌿</span>
+      <span class="mm-card-body">
+        <span class="mm-card-name">ヘルシー女子部（架空）</span>
+        <span class="mm-card-desc">健康・美容・ウェルネスに関心の高い20〜35歳女性。食事制限なし…</span>
+      </span>
+      <span class="mm-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
+    </button></div>
   </div>
 </div>
 
 <!-- History Drawer -->
 <div class="hist-ov" id="histOv" onclick="closeDrawer()"></div>
 <div id="histDrawer">
-  <div class="hist-head"><h3>生成履歴</h3><button class="hist-close" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
-  <div class="hist-body" id="histBody"></div>
+  <div class="hist-head"><h3>生成履歴</h3><button class="hist-close" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button></div>
+  <div class="hist-body" id="histBody"><div class="hist-item" onclick="loadHist(1777807730414)">
+      <div class="hist-top">
+        <span style="font-size:14px;">✨</span>
+        <span class="h-mag">CanCam 2026年6月号</span>
+        <span class="h-chip c">SK-II特集</span>
+        <span class="h-chip f">Web記事</span>
+      </div>
+      <div class="h-theme">プチプラコスメのおすすめ五選</div>
+      <div class="h-prev">【2026年夏】賢く可愛くなろ♡CanCamインフルエンサーがガチ推しする！絶対買い♡プチプラコスメ５選✨
+
+夏のおしゃ…</div>
+      <div class="h-time" style="margin-top:4px;">今</div>
+    </div><div class="hist-item" onclick="loadHist(1777807424438)">
+      <div class="hist-top">
+        <span style="font-size:14px;">✨</span>
+        <span class="h-mag">CanCam 2026年6月号</span>
+        <span class="h-chip c">SK-II特集</span>
+        <span class="h-chip f">Web記事</span>
+      </div>
+      <div class="h-theme">人気YouTuberゼパさん26歳で急逝、「アルコール依存症」投稿に戦慄について</div>
+      <div class="h-prev">【CanCam 6月号】突然の悲報に、言葉を失いました…😢 人気YouTuberゼパさん、26歳という若さでこの世を去…</div>
+      <div class="h-time" style="margin-top:4px;">5分前</div>
+    </div><div class="hist-item" onclick="loadHist(1777805503804)">
+      <div class="hist-top">
+        <span style="font-size:14px;">✨</span>
+        <span class="h-mag">Oggi</span>
+        <span class="h-chip c">ファッション＆ビュー</span>
+        <span class="h-chip f">Web記事</span>
+      </div>
+      <div class="h-theme">人気YouTuberゼパさん26歳で急逝、「アルコール依存症」投稿に戦慄について</div>
+      <div class="h-prev">【悲報】人気YouTuberゼパさん、26歳で突然の訃報。投稿にあった「アルコール依存症」の影に、私たちは何を思うべきか…</div>
+      <div class="h-time" style="margin-top:4px;">37分前</div>
+    </div><div class="hist-item" onclick="loadHist(1777804142489)">
+      <div class="hist-top">
+        <span style="font-size:14px;">✨</span>
+        <span class="h-mag">Oggi</span>
+        <span class="h-chip c">ファッション＆ビュー</span>
+        <span class="h-chip f">Web記事</span>
+      </div>
+      <div class="h-theme">プチプラコスメのおすすめ５選</div>
+      <div class="h-prev">【30代からの「賢く」選ぶ！最新プチプラコスメBEST5】
+
+「今日のメイク、なんだかパッとしない…」「新しいコスメが欲…</div>
+      <div class="h-time" style="margin-top:4px;">59分前</div>
+    </div><div class="hist-item" onclick="loadHist(1777797502930)">
+      <div class="hist-top">
+        <span style="font-size:14px;">💄</span>
+        <span class="h-mag">LDK the Beauty</span>
+        <span class="h-chip c">リップセラム徹底比較</span>
+        <span class="h-chip f">YouTube 長尺動画台本</span>
+      </div>
+      <div class="h-theme">夏のスキンケアルーティン</div>
+      <div class="h-prev">はい、承知いたしました。「LDK the Beauty」の熟練ライターとして、夏のスキンケアルーティンに関するYouTu…</div>
+      <div class="h-time" style="margin-top:4px;">2時間前</div>
+    </div><div class="hist-item" onclick="loadHist(1777797471116)">
+      <div class="hist-top">
+        <span style="font-size:14px;">💄</span>
+        <span class="h-mag">LDK the Beauty</span>
+        <span class="h-chip c">リップセラム徹底比較</span>
+        <span class="h-chip f">YouTube Shorts 台本</span>
+      </div>
+      <div class="h-theme">夏のスキンケアルーティン</div>
+      <div class="h-prev">（動画開始、画面いっぱいに夏の強い日差しと汗ばむ肌のアップ）
+
+**テロップ：【衝撃】夏肌、このまま放置してない？😱*…</div>
+      <div class="h-time" style="margin-top:4px;">2時間前</div>
+    </div><div class="hist-item" onclick="loadHist(1777797458130)">
+      <div class="hist-top">
+        <span style="font-size:14px;">💄</span>
+        <span class="h-mag">LDK the Beauty</span>
+        <span class="h-chip c">リップセラム徹底比較</span>
+        <span class="h-chip f">X (Twitter) ポスト</span>
+      </div>
+      <div class="h-theme">夏のスキンケアルーティン</div>
+      <div class="h-prev">夏の肌悩み、ありませんか？ベタつき、テカリ、毛穴…お任せください！LDK the Beautyが「夏のスキンケアルーティ…</div>
+      <div class="h-time" style="margin-top:4px;">2時間前</div>
+    </div><div class="hist-item" onclick="loadHist(1777797444405)">
+      <div class="hist-top">
+        <span style="font-size:14px;">💄</span>
+        <span class="h-mag">LDK the Beauty</span>
+        <span class="h-chip c">リップセラム徹底比較</span>
+        <span class="h-chip f">Web記事</span>
+      </div>
+      <div class="h-theme">夏のスキンケアルーティン</div>
+      <div class="h-prev">【夏のスキンケア、正直どうしてる？】ベタつく肌も、隠れ乾燥も、プロが解決します！
+
+「夏はテカるから、さっぱりさせたい！…</div>
+      <div class="h-time" style="margin-top:4px;">2時間前</div>
+    </div><div class="hist-item" onclick="loadHist(1777741196496)">
+      <div class="hist-top">
+        <span style="font-size:14px;">🌿</span>
+        <span class="h-mag">ヘルシー女子部（架空）</span>
+        <span class="h-chip c">ダイエット・食事管理</span>
+        <span class="h-chip f">Web記事</span>
+      </div>
+      <div class="h-theme">プチプラのおすすめ5選</div>
+      <div class="h-prev">ねぇ、最近ちょっと「なんか調子でないな…」って感じてない？🌿
+朝起きるのがつらかったり、なんだか肌の調子がいまいちだっ…</div>
+      <div class="h-time" style="margin-top:4px;">18時間前</div>
+    </div></div>
 </div>
-<div id="toast"></div>
+<div id="toast" class="">✦ 生成完了！</div>
 
 <script>
 'use strict';
@@ -1188,7 +2699,7 @@ async function exportHtml(){
   try{
     let src = document.documentElement.outerHTML;
     // Find the MAGS marker and replace with current data
-    const MS='/*__MPS_MAGS_S__*/';const ME='/*__MPS_MAGS_E__*/';
+    const MS='/*__MPS_MAGS_S__*/const DEFAULTS=[{"id":"mag_1777807400075","name":"CanCam 2026年6月号","icon":"✨","target":"「なりたい自分」を叶えたい、トレンドに敏感な20代〜30代前半の女性。ファッション、ビューティ、ライフスタイルに関心が高く、具体的な情報や体験談を求めている。雑誌の読者層をSNSでも獲得し、エンゲージメントを高めることを目指す。","tone":"ベーストーンは親しみやすい丁寧語（です・ます調）だが、読者への共感や親近感を出すために、適度なくだけた表現（〜だよね、〜じゃない？）や、絵文字（♡、✨、😍など）を多用する。頻出ワードは「〜GET」「〜推し」「〜最旬」「〜爆買い」「〜上品」「〜大人っぽい」「〜抜け感」など。専門用語は分かりやすく解説し、読者の理解を助ける。禁止語は攻撃的な言葉や、読者を不快にさせる表現。口調の温度感は、友達に話しかけるような親しみやすさと、トレンド情報を的確に伝える信頼感を両立させる。","fluctuations":[{"name":"SK-II特集","desc":"冒頭はブランドの歴史や特集テーマを提示し、期待感を高める。展開では、キー成分や代表商品の紹介、歴史、効果、使い方を専門家コメントやモデル体験談を交えて詳細に解説。締めは新商品紹介や、読者への「あなたもこの感動を体験しませんか？」といったメッセージで、ブランドへの継続的な愛着を促す。"},{"name":"韓国ビューティ旅特集","desc":"冒頭は「韓国ビューティ旅へ！」のようなキャッチーなタイトルで読者の興味を刺激し、旅のテーマを提示。展開では、モデルやインフルエンサーのリアルな旅スケジュールを写真や地図と共に詳細に解説し、具体的な店舗名、商品名、価格、効果を明記。締めは旅の総括や、読者への「あなたも韓国でキレイをアップデートしませんか？」といった行動喚起、お土産情報で参考になる情報で締めくくる。"},{"name":"「25歳からの色っぽ服」特集","desc":"冒頭は読者の年齢や悩みに寄り添う問いかけで開始。展開では、具体的なアイテムやコーディネートをモデル写真と共に紹介し、スタイリスト解説でポイントやブランド情報を解説。デコルテ美人服やTシャツ美女などのテーマで掘り下げる。締めは読者が挑戦したくなるようなポジティブなメッセージや、具体的な購入先情報で構成する。"}],"patterns":["冒頭で読者の悩みや願望に寄り添う問いかけ、または魅力的なキャッチコピーを提示","体験談や専門家のコメントを交え、具体的な商品・サービス情報を分かりやすく解説","写真やイラストを効果的に使用し、視覚的な魅力を高める","記事の終盤に、購買誘導やSNSフォローを促すCTAを自然な形で配置","適度な絵文字やハッシュタグで、SNSらしい親しみやすさと情報伝達力を両立"]},{"id":"mag_1777804098592","name":"Oggi","icon":"✨","target":"「自分らしい」を大切にしたい、知的好奇心旺盛な30代〜40代の働く女性。ファッション、ビューティ、ライフスタイル、キャリアなど、等身大の視点から、賢く、豊かに生きるためのヒントを求めている。","tone":"ベーストンマナーは、読者に寄り添い、共感を呼ぶ丁寧な語り口。「〜です」「〜ます」調を基本とし、親近感を出すために一部「〜だよね」「〜なんだ」といった表現も許容される。頻出語彙は「〜らしい」「〜感」「アップデート」「賢く」「豊かに」「〜したい」「〜になりたい」。禁止語は、若者言葉、断定しすぎる表現、ネガティブすぎる言葉。「〜べき」「〜しなければならない」といった義務的な表現も避ける。絵文字はほとんど使用しない。口調の温度感は、親しみやすさと信頼感を両立させた、温かくも知的なトーン。","fluctuations":[{"name":"✨ ファッション＆ビューティ","desc":"冒頭は最新トレンドや注目アイテムの紹介で始め、読者が抱える「どんなアイテムを選べばいいか分からない」といった悩みに共感する一文を加える。展開では、アイテムの詳細なレビュー、着こなし方、おすすめポイントを具体的に解説し、可能であればビフォーアフター写真や使用シーンのイメージ画像を挿入する。締めは、「ぜひ試してみてください」「新しい季節にぴったり」といった、読者の行動を促す言葉で結ぶ。"},{"name":"🌸 ライフスタイル＆キャリア","desc":"冒頭は、「忙しい」を理由に後回しにしがちなことへの共感や、読者の悩みに寄り添う問いかけで始める。「そんなあなたに試してほしい、〇〇（解決策）をご紹介します」と、解決策があることを示唆する。展開では、具体的なアドバイスや筆者自身の経験談を、ステップごとに分かりやすく解説し、具体的な効果や変化をエピソードで紹介する。締めは、「あなたならきっとできる」「応援しています」といった、読者の行動を後押しするメッセージで結ぶ。"},{"name":"🎬 エンタメ＆カルチャー","desc":"冒頭は、作品の概要や注目ポイントの提示で始め、読者の興味を引く。「〇〇（作品名）の魅力に迫ります」といった導入でも良い。展開では、ストーリーの魅力、キャラクターの深掘り、見どころの解説を、読者が理解しやすい言葉で解説する。締めは、「ぜひチェックしてみてください」「感想を聞かせてください」といった、視聴や体験を促す言葉で結ぶ。"}],"patterns":["読者の悩みや願望に共感する問いかけから始める","具体的な体験談や実例を交えて解説する","メリットだけでなく、デメリットや注意点も正直に伝える","読者の行動を後押しする、ポジティブなメッセージで締めくくる","洗練されたビジュアルと、分かりやすい文章構成で情報を提示する"]},{"id":"mag_1777797392905","name":"LDK the Beauty","icon":"💄","target":"美容に関心があり、情報収集に積極的な20〜40代女性。最新コスメやスキンケア情報はもちろん、商品の実力やコストパフォーマンスを重視し、「失敗したくない」というニーズを持つ読者層。信頼できる情報源を求めている。","tone":"ベーストンマナー：信頼性・専門性・親しみやすさのバランス。文末は「です・ます」調を基本とするが、読者への語りかけとして「〜ですよね」「〜じゃないですか？」などの疑問形や「〜なんです」といった共感を促す表現も適宜使用する。頻出語彙：「徹底検証」「プロがチェック」「ベストバイ」「正直レビュー」「〜が叶う」「〜が期待できる」「〜にぴったり」「今っぽ」「万能」「血色感UP」など。禁止語：「奇跡の」「魔法の」「絶対」「必ず」など、根拠のない断定や誇張表現。絵文字ルール：使用頻度は低め。リード文や見出し、注釈などに記号的な絵文字（♡, ♪, ☆, ！, ？, ○, ●, ▲, ■ など）を効果的に使用する。口調の温度感：冷静で客観的な分析を基調としつつ、読者の悩みに寄り添う温かみのあるトーン。","fluctuations":[{"name":"💄リップセラム徹底比較！","desc":"冒頭は読者の悩み（乾燥、血色感不足）に共感する問いかけ、または共感型フックで始める。検証の目的と方法（評価項目、専門家によるチェックなど）を具体的に提示する。各商品のレビューは「仕上がり」「保湿力」「成分」「使用感」の順で、客観的な評価と具体的な描写を交えながら解説する。ベストバイ製品は、その理由を詳細に説明する。最後に読者への応援メッセージと、シェア・保存を促すCTAで締めくくる。"}],"patterns":["読者の悩み・疑問に寄り添う冒頭フック（問いかけ、共感）","検証方法・評価基準の明確な提示（専門家の名前、客観的指標）","商品レビューにおける「仕上がり、保湿力、成分、使用感」の網羅的かつ客観的な評価","「ベストバイ」などの評価は、具体的な理由と共に明記","PR表記は控えめだが、正直で信頼できるレビューを重視","ネガティブ要素は正直に記述し、メリットや代替案でフォロー","記事終盤に、読者への応援メッセージと自然なCTAを配置"]},{"id":"mag_beauty","name":"コスメ垢 by みき（架空）","icon":"💄","target":"20代〜30代の美容・コスメ好き女性。プチプラから韓国コスメ・デパコスまで幅広くレビュー。アフィリエイト・PR記事中心のSNSアカウント。失敗談や本音を交えた共感型コンテンツで信頼を獲得している。","tone":"フレンドリーで親しみやすい口語体。「〜してみた✨」「正直に言うと…」「これ絶対ハマる」など体験談口調が基本。文末に絵文字を多用（💓🥺✨🙌）。商品名はカタカナ正式名称で表記。PR記事は冒頭に「※この記事はPRを含みます」を入れる。結論から入り（「これ神コスメです！」）理由を後から補強するスタイル。禁止語：「激安」「ヤバい」の多用、過度な医療効果の断言。","fluctuations":[{"name":"💄 コスメ・スキンケアレビュー","desc":"冒頭は「〜を使い始めてから変わった！」など変化の実感から始める。テクスチャ・匂い・使い心地を五感で描写し、Before/Afterを必ず入れる。「こんな人に向いてる」で締める。"},{"name":"💊 健康・サプリ・ダイエット","desc":"冒頭は「実は私ずっと〜に悩んでて」と自己開示から始める。数値や期間を具体的に（「2週間で〜」）入れ、中盤に信頼性のための注意書きを添え、最後はポジティブな変化で締める。"},{"name":"👗 ファッション・プチプラコーデ","desc":"冒頭は「〇〇円以下で揃う！」など価格訴求の宣言から始める。ブランド名・価格・購入場所を箇条書きで提示し、「どこに着ていける？」というシーン提案で締める。"},{"name":"🌟 トレンド・バズりもの紹介","desc":"冒頭は「今TikTokで話題の〜」「知ってた？」などバズ感の演出から始める。テンポよく3〜5個を箇条書きで紹介し、「どれが気になった？コメントで教えて！」のCTAで締める。"},{"name":"📖 体験談・エッセイ風読みもの","desc":"冒頭は「実は私、長年〜に悩んでて…」と葛藤の自己開示から始める。感情の山を作りながら展開し、「あなただけじゃないよ」という共感・励ましで締める。商品紹介は自然な流れで挟む。"},{"name":"💬 ぶっちゃけ・本音レポ","desc":"冒頭は「正直に言います」「忖度なし！」と免責宣言から始める。良い点と気になる点を対等に述べ（ネガも必ず入れる）、「でも私はまたリピする。なぜなら〜」で締める。"}],"patterns":["つかみ：変化・驚き・共感から入る（結論先出し）","なぜこれを紹介するか（体験・悩みの背景）","商品・コンテンツの具体的な説明（特徴・価格・入手方法）","使ってみた感想・Before/After・数値","おすすめしたい人／向かない人","CTA：コメント・フォロー・URLクリックへの誘導"]},{"id":"mag_puchi","name":"プチプラ生活研究所（架空）","icon":"💰","target":"節約・コスパ志向の20〜40代。100均・セリア・ダイソー・しまむら等のプチプラアイテムを中心に生活を豊かにするアイデアを発信するブログ・SNS媒体。「お金をかけずにQOLを上げる」が編集方針。","tone":"明るく実用的なトーン。「コスパ最強！」「節約するなら絶対コレ」など断言系フレーズを多用。数字（価格・割引率・使用日数）を必ず入れる。類似高価格商品との比較を好む。禁止語：「高級感」「プレミアム」などラグジュアリー系表現。絵文字は控えめ（1段落に1〜2個）。","fluctuations":[{"name":"💰 プチプラ商品レビュー","desc":"冒頭は「〇〇円でこのクオリティ！」と価格宣言から始める。購入場所・品番・価格を箇条書きで提示し、類似高価格商品との比較を挟み、「節約効果〇〇円/月」で締める。"},{"name":"🏠 100均DIY・収納アイデア","desc":"冒頭は「材料費合計〇〇円」と総コストの宣言から始める。手順を番号リストで簡潔に記述し、「不器用さんでも30分でできた」など再現性を強調して締める。"},{"name":"🛒 セール・お得情報速報","desc":"冒頭は「⚠️見逃し厳禁！」「〇〇日限定」と緊急感の演出から始める。いつ・どこで・何が・いくらでを箇条書きで素早く伝え、「シェアしてね」CTAで締める。"}],"patterns":["価格・コスパの宣言（「〇〇円でこのクオリティ！」）","商品スペック・特徴の箇条書き","実際に使った率直な感想","同価格帯または高価格帯との比較","どこで買えるか・在庫情報","まとめ・節約効果の数値提示"]},{"id":"mag_healthy","name":"ヘルシー女子部（架空）","icon":"🌿","target":"健康・美容・ウェルネスに関心の高い20〜35歳女性。食事制限なし・無理なし・継続できるをモットーに、ダイエット・腸活・スキンケア・メンタルケアをゆるく発信するSNSメディア。「正解を押しつけない」が編集方針。","tone":"穏やかでポジティブ、押しつけがましくないトーン。「〜してみてね」「無理しなくていいよ」など急かさない言葉を選ぶ。科学的根拠をさりげなく添えるが医療的断言は避け「〜とも言われています」「私はこう感じた」の主観表現を好む。ナチュラル・オーガニック系語彙。絵文字は適度（🌿🍵✨🌸を好む）。","fluctuations":[{"name":"🌿 ダイエット・食事管理","desc":"冒頭は「頑張りすぎてない？」という読者への問いかけから始める。「痩せる」より「整える」表現を使い、「増やす」視点から提案し、「あなたのペースでいい」という肯定で締める。"},{"name":"💚 腸活・サプリ・発酵食品","desc":"冒頭は「腸が整うと人生変わるって本当だった」など自己体験の結論から始める。腸→美肌→メンタルの繋がりをロジックで説明し、「毎朝これだけ」という習慣化提案で締める。"},{"name":"🧘 メンタルケア・セルフケア","desc":"冒頭は「最近しんどくない？」という共感の問いかけから始める。読者の気持ちに完全に寄り添いながら展開し、「正解はない」「あなたのペースでいい」という無条件の肯定で締める。"}],"patterns":["読者への問いかけ・共感フック（「こんなお悩みありませんか？」）","なぜこれが効くのかのゆるい解説","私の実践例・日常への取り入れ方","注意点・個人差があることの断り書き","まとめ：無理せず続けることが大切という着地","関連記事・次のアクションへの誘導"]}];/*__MPS_MAGS_E__*/';
     const si=src.indexOf(MS);const ei=src.indexOf(ME);
     if(si===-1||ei===-1){
       // No marker yet — inject at DEFAULTS definition
@@ -1231,5 +2742,6 @@ function toast(msg){const e=document.getElementById('toast');e.textContent=msg;e
 document.addEventListener('DOMContentLoaded',init);
 </script>
 </div>
-</body>
-</html>
+
+
+<div class="__selection-popup-container__" style="display: none;"><ul><li data-is-command="true" data-action="copy">Copy</li><li data-is-command="false" data-action="https://google.com/search?q=%s">Google</li><li data-is-command="false" data-action="https://www.youtube.com/results?search_query=%s">Youtube</li><li data-is-command="false" data-action="https://search.yahoo.co.jp/search?p=%s">Yahoo検索</li><li data-is-command="false" data-action="https://www.google.com/maps/place/search?q=%s">Google Map</li><li data-is-command="false" data-action="https://x.com/search?q=%s">X</li><li data-is-command="false" data-action="https://www.threads.com/@%s">Threads</li><li data-is-command="false" data-action="https://www.google.com/search?q=site:tiktok.com+&quot;%s&quot;">TikTok</li><li data-is-command="false" data-action="https://www.google.com/search?q=site:instagram.com+&quot;%s&quot;">Instagram（Google内）</li><li data-is-command="false" data-action="https://www.google.com/search?q=site:youtube.com+&quot;%s&quot;">YouTube（Google内）</li></ul></div><textarea id="BFI_DATA" style="width: 1px; height: 1px; display: none;"></textarea><title> </title><div id="WidgetFloaterPanels" translate="no" style="display: none; text-align: left; direction: ltr; visibility: hidden;" class="LTRStyle"> <div id="WidgetFloater" style="display: none" onmouseover="Microsoft.Translator.OnMouseOverFloater()" onmouseout="Microsoft.Translator.OnMouseOutFloater()"> <div id="WidgetLogoPanel"> <span id="WidgetTranslateWithSpan"><span>TRANSLATE with <div id="extwaiokist" style="display:none" v="pdbbg" q="7848d802" c="51.06" i="167" u="19.67" s="04262616" sg="svr_02092622-ga_04262616-bai_03032610" d="1" w="false" e="" a="2" m="BMe=" vn="1gtra"><div id="extwaigglbit" style="display:none" v="pdbbg" q="7848d802" c="51.06" i="167" u="19.67" s="04262616" sg="svr_02092622-ga_04262616-bai_03032610" d="1" w="false" e="" a="2" m="BMe="></div></div></span><img id="FloaterLogo"></span> <span id="WidgetCloseButton" title="Exit Translation" onclick="Microsoft.Translator.FloaterOnClose()">x</span></div> <div id="LanguageMenuPanel"> <div class="DDStyle_outer"><input name="LanguageMenu_svid" type="text" id="LanguageMenu_svid" style="display:none;" autocomplete="on" value="en" onclick="this.select()"> <input name="LanguageMenu_textid" type="text" id="LanguageMenu_textid" style="display:none;" autocomplete="on" onclick="this.select()"> <span onselectstart="return false" tabindex="0" class="DDStyle" id="__LanguageMenu_header" onclick="return LanguageMenu &amp;&amp; !LanguageMenu.Show('__LanguageMenu_popup', event);" onkeydown="return LanguageMenu &amp;&amp; !LanguageMenu.Show('__LanguageMenu_popup', event);">English</span> <div style="position:relative;text-align:left;left:0;"><div style="position:absolute;width:;left:0px;"><div class="DDStyle" style="display:none;" id="__LanguageMenu_popup"> <table id="LanguageMenu" border="0"> <tbody><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('ar');" ondragstart="LanguageMenu.ondragstart(event);" href="#ar">Arabic</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('he');" ondragstart="LanguageMenu.ondragstart(event);" href="#he">Hebrew</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('pl');" ondragstart="LanguageMenu.ondragstart(event);" href="#pl">Polish</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('bg');" ondragstart="LanguageMenu.ondragstart(event);" href="#bg">Bulgarian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('hi');" ondragstart="LanguageMenu.ondragstart(event);" href="#hi">Hindi</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('pt');" ondragstart="LanguageMenu.ondragstart(event);" href="#pt">Portuguese</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('ca');" ondragstart="LanguageMenu.ondragstart(event);" href="#ca">Catalan</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('mww');" ondragstart="LanguageMenu.ondragstart(event);" href="#mww">Hmong Daw</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('ro');" ondragstart="LanguageMenu.ondragstart(event);" href="#ro">Romanian</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('zh-CHS');" ondragstart="LanguageMenu.ondragstart(event);" href="#zh-CHS">Chinese Simplified</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('hu');" ondragstart="LanguageMenu.ondragstart(event);" href="#hu">Hungarian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('ru');" ondragstart="LanguageMenu.ondragstart(event);" href="#ru">Russian</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('zh-CHT');" ondragstart="LanguageMenu.ondragstart(event);" href="#zh-CHT">Chinese Traditional</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('id');" ondragstart="LanguageMenu.ondragstart(event);" href="#id">Indonesian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('sk');" ondragstart="LanguageMenu.ondragstart(event);" href="#sk">Slovak</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('cs');" ondragstart="LanguageMenu.ondragstart(event);" href="#cs">Czech</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('it');" ondragstart="LanguageMenu.ondragstart(event);" href="#it">Italian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('sl');" ondragstart="LanguageMenu.ondragstart(event);" href="#sl">Slovenian</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('da');" ondragstart="LanguageMenu.ondragstart(event);" href="#da">Danish</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('ja');" ondragstart="LanguageMenu.ondragstart(event);" href="#ja">Japanese</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('es');" ondragstart="LanguageMenu.ondragstart(event);" href="#es">Spanish</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('nl');" ondragstart="LanguageMenu.ondragstart(event);" href="#nl">Dutch</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('tlh');" ondragstart="LanguageMenu.ondragstart(event);" href="#tlh">Klingon</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('sv');" ondragstart="LanguageMenu.ondragstart(event);" href="#sv">Swedish</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('en');" ondragstart="LanguageMenu.ondragstart(event);" href="#en">English</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('ko');" ondragstart="LanguageMenu.ondragstart(event);" href="#ko">Korean</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('th');" ondragstart="LanguageMenu.ondragstart(event);" href="#th">Thai</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('et');" ondragstart="LanguageMenu.ondragstart(event);" href="#et">Estonian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('lv');" ondragstart="LanguageMenu.ondragstart(event);" href="#lv">Latvian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('tr');" ondragstart="LanguageMenu.ondragstart(event);" href="#tr">Turkish</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('fi');" ondragstart="LanguageMenu.ondragstart(event);" href="#fi">Finnish</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('lt');" ondragstart="LanguageMenu.ondragstart(event);" href="#lt">Lithuanian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('uk');" ondragstart="LanguageMenu.ondragstart(event);" href="#uk">Ukrainian</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('fr');" ondragstart="LanguageMenu.ondragstart(event);" href="#fr">French</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('ms');" ondragstart="LanguageMenu.ondragstart(event);" href="#ms">Malay</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('ur');" ondragstart="LanguageMenu.ondragstart(event);" href="#ur">Urdu</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('de');" ondragstart="LanguageMenu.ondragstart(event);" href="#de">German</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('mt');" ondragstart="LanguageMenu.ondragstart(event);" href="#mt">Maltese</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('vi');" ondragstart="LanguageMenu.ondragstart(event);" href="#vi">Vietnamese</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('el');" ondragstart="LanguageMenu.ondragstart(event);" href="#el">Greek</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('no');" ondragstart="LanguageMenu.ondragstart(event);" href="#no">Norwegian</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('cy');" ondragstart="LanguageMenu.ondragstart(event);" href="#cy">Welsh</a></td> </tr><tr> <td><a tabindex="-1" onclick="return LanguageMenu.onclick('ht');" ondragstart="LanguageMenu.ondragstart(event);" href="#ht">Haitian Creole</a></td><td><a tabindex="-1" onclick="return LanguageMenu.onclick('fa');" ondragstart="LanguageMenu.ondragstart(event);" href="#fa">Persian</a></td><td></td> </tr> </tbody></table> <img alt="" style="height:7px;width:17px;border-width:0px;left:20px;"> </div></div></div></div> <script type="text/javascript"> var LanguageMenu; var LanguageMenu_keys=["ar","bg","ca","zh-CHS","zh-CHT","cs","da","nl","en","et","fi","fr","de","el","ht","he","hi","mww","hu","id","it","ja","tlh","ko","lv","lt","ms","mt","no","fa","pl","pt","ro","ru","sk","sl","es","sv","th","tr","uk","ur","vi","cy"]; var LanguageMenu_values=["Arabic","Bulgarian","Catalan","Chinese Simplified","Chinese Traditional","Czech","Danish","Dutch","English","Estonian","Finnish","French","German","Greek","Haitian Creole","Hebrew","Hindi","Hmong Daw","Hungarian","Indonesian","Italian","Japanese","Klingon","Korean","Latvian","Lithuanian","Malay","Maltese","Norwegian","Persian","Polish","Portuguese","Romanian","Russian","Slovak","Slovenian","Spanish","Swedish","Thai","Turkish","Ukrainian","Urdu","Vietnamese","Welsh"]; var LanguageMenu_callback=function(){ }; var LanguageMenu_popupid='__LanguageMenu_popup'; </script> </div> <div id="CTFLinksPanel"> <span id="ExternalLinksPanel"><a id="HelpLink" title="Help" target="_blank" href="https://go.microsoft.com/?linkid=9722454"> <img id="HelpImg"></a> <a id="EmbedLink" href="javascript:Microsoft.Translator.FloaterShowEmbed()" title="Get this widget for your own site"> <img id="EmbedImg"></a> <a id="ShareLink" title="Share translated page with friends" href="javascript:Microsoft.Translator.FloaterShowSharePanel()"> <img id="ShareImg"></a> </span> </div> <div id="FloaterProgressBar"> <span id="ProgressFill"></span> </div> </div> <div id="WidgetFloaterCollapsed" style="display: none" onmouseover="Microsoft.Translator.OnMouseOverFloater()"> <span>TRANSLATE with </span><img id="CollapsedLogoImg"></div> <div id="FloaterSharePanel" style="display: none"> <div id="ShareTextDiv"> <span id="ShareTextSpan"> COPY THE URL BELOW </span> </div> <div id="ShareTextboxDiv"> <input name="ShareTextbox" type="text" id="ShareTextbox" readonly="readonly" onclick="this.select()"> <!--a id="TwitterLink" title="Share on Twitter"> <img id="TwitterImg" /></a> <a-- id="FacebookLink" title="Share on Facebook"> <img id="FacebookImg" /></a--> <a id="EmailLink" title="Email this translation"> <img id="EmailImg"></a> </div> <div id="ShareFooter"> <span id="ShareHelpSpan"><a id="ShareHelpLink"> <img id="ShareHelpImg"></a></span> <span id="ShareBackSpan"><a id="ShareBack" href="javascript:Microsoft.Translator.FloaterOnShareBackClick()" title="Back To Translation"> Back</a></span> </div> <input name="EmailSubject" type="hidden" id="EmailSubject" value="Check out this page in {0} translated from {1}"> <input name="EmailBody" type="hidden" id="EmailBody" value="Translated: {0}%0d%0aOriginal: {1}%0d%0a%0d%0aAutomatic translation powered by Microsoft® Translator%0d%0ahttp://www.bing.com/translator?ref=MSTWidget"> <input type="hidden" id="ShareHelpText" value="This link allows visitors to launch this page and automatically translate it to {0}."> </div> <div id="FloaterEmbed" style="display: none"> <div id="EmbedTextDiv"> <span id="EmbedTextSpan">EMBED THE SNIPPET BELOW IN YOUR SITE</span> <a id="EmbedHelpLink" title="Copy this code and place it into your HTML."> <img id="EmbedHelpImg"></a> </div> <div id="EmbedTextboxDiv"> <input name="EmbedSnippetTextBox" type="text" id="EmbedSnippetTextBox" readonly="readonly" value="&lt;div id='MicrosoftTranslatorWidget' class='Dark' style='color:white;background-color:#555555'&gt;&lt;/div&gt;&lt;script type='text/javascript'&gt;setTimeout(function(){var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location &amp;&amp; location.href &amp;&amp; location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&amp;ctf=true&amp;ui=true&amp;settings=manual&amp;from=en';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); },0);&lt;/script&gt;" onclick="this.select()"> </div> <div id="EmbedNoticeDiv"><span id="EmbedNoticeSpan">Enable collaborative features and customize widget: <a href="http://www.bing.com/widget/translator" target="_blank">Bing Webmaster Portal</a></span></div> <div id="EmbedFooterDiv"><span id="EmbedBackSpan"><a href="javascript:Microsoft.Translator.FloaterOnEmbedBackClick()" title="Back To Translation">Back</a></span></div> </div> <script type="text/javascript"> var intervalId = setInterval(function () { if (MtPopUpList) { LanguageMenu = new MtPopUpList(); var langMenu = document.getElementById(LanguageMenu_popupid); var origLangDiv = document.createElement("div"); origLangDiv.id = "OriginalLanguageDiv"; origLangDiv.innerHTML = "<span id='OriginalTextSpan'>ORIGINAL: </span><span id='OriginalLanguageSpan'></span>"; langMenu.appendChild(origLangDiv); LanguageMenu.Init('LanguageMenu', LanguageMenu_keys, LanguageMenu_values, LanguageMenu_callback, LanguageMenu_popupid); window["LanguageMenu"] = LanguageMenu; clearInterval(intervalId); } }, 1); </script> </div></body><div></div></html>
